@@ -1,4 +1,4 @@
-import { ImgAtom } from "../Atoms";
+import { ImgAtom } from "@/components/Atoms";
 
 interface ImageCardProps {
   imageUrl: string;

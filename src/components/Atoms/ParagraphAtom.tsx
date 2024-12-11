@@ -1,7 +1,11 @@
 interface ParagraphAtomProps {
-  text: string;
+  children: React.ReactNode;
+  className: string;
 }
 
-export const ParagraphAtom: React.FC<ParagraphAtomProps> = ({ text }) => {
-  return <div>{text}</div>;
+export const ParagraphAtom: React.FC<ParagraphAtomProps> = ({
+  children,
+  className,
+}) => {
+  return <div className={className}>{children}</div>;
 };

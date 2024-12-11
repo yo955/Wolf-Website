@@ -3,7 +3,7 @@ interface ButtonAtomprops {
   onClick?: () => void;
 }
 
-const ButtonAtom: React.FC<ButtonAtomprops> = ({ text, onClick }) => {
+export const ButtonAtom: React.FC<ButtonAtomprops> = ({ text, onClick }) => {
   return <button onClick={onClick}>{text}</button>;
 };
 

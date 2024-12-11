@@ -1,6 +1,10 @@
 interface HeadingAtomProps {
-  text: string;
+  children: React.ReactNode;
+  className: string;
 }
-export const HeadingAtom: React.FC<HeadingAtomProps> = ({ text }) => {
-  return <div>{text}</div>;
+export const HeadingAtom: React.FC<HeadingAtomProps> = ({
+  children,
+  className,
+}) => {
+  return <div className={className}>{children}</div>;
 };
