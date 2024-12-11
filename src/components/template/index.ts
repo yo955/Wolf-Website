@@ -1,0 +1,1 @@
+export { MainTempleate } from "./MainTempleate";

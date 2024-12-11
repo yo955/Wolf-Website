@@ -1,3 +1,4 @@
+"use client"
 import { HeadingAtom, ImgAtom, ParagraphAtom } from "@/components/Atoms";
 
 interface SlideContentprops {
@@ -15,7 +16,7 @@ export const SlideContent: React.FC<SlideContentprops> = ({
 }) => {
   return (
     <div className="slide-content">
-      <ImgAtom className="slide-image" src={imageUrl} alt={alt} />
+      <ImgAtom className="slide-image" src={imageUrl} alt={alt}width={100} height={100}/>
       {title && <HeadingAtom className="slide-title">{title}</HeadingAtom>}
       {description && (
         <ParagraphAtom className="slide-paragraph">{description}</ParagraphAtom>

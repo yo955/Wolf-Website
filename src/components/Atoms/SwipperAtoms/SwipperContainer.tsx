@@ -1,3 +1,4 @@
+"use client"
 import { Swiper } from "swiper/react";
 // import Swiper and modules styles
 import "swiper/css";
@@ -7,8 +8,8 @@ interface SwipperContainerprops {
   children: React.ReactNode;
   loop?: true;
   autoplay?: true;
+  spaceBetween?: number;
   slidesPerView: number;
-  spaceBetween: number;
 }
 export const SwipperContainer: React.FC<SwipperContainerprops> = ({
   children,
