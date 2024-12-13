@@ -1,4 +1,3 @@
-import React from "react";
 import { SlideContent, SwipperContainer } from "../Atoms";
 
 export const ImageSlider: React.FC = () => {
