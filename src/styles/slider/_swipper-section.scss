@@ -1,0 +1,10 @@
+.swipper-section{
+    display: flex;
+    flex-direction: column;
+    margin-block: 20px;
+    text-align: center;
+    gap: 1px;
+    .description{
+        margin-block: 15px;
+    }
+}

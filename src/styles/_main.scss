@@ -1,8 +1,12 @@
+// global styles
+@import "./variables";
+@import "./mixins";
+@import "./globals";
+
 // slider styles
 @import "./slider/slide-content";
 @import "./slider/swipper-container";
+@import "./slider/swipper-section";
 
-// global styles
-@import "./globals";
-@import "./variables";
-@import "./mixins";
+// files
+@import ''

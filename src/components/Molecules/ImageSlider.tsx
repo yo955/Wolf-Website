@@ -7,9 +7,9 @@ export const ImageSlider: React.FC = () => {
     slidesImgs.push(`${mainbath}/swipper-${i}.png`);
   }
   return (
-    <SwipperContainer slidesPerView={5} spaceBetween={10}>
+    <SwipperContainer slidesPerView={5} spaceBetween={50}>
       <SwipperSlide>
-        <div className="slide-content flex">
+        <div className="slide-content flex gap-10">
           {slidesImgs.map((img, index) => (
             <SlideContent
               key={index}
