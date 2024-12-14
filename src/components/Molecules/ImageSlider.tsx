@@ -1,4 +1,4 @@
-import { SlideContent, SwipperContainer } from "../Atoms";
+import { SlideContent, SwipperContainer, SwipperSlide } from "../Atoms";
 
 export const ImageSlider: React.FC = () => {
   const mainbath = "/images/slider";
@@ -8,9 +8,17 @@ export const ImageSlider: React.FC = () => {
   }
   return (
     <SwipperContainer slidesPerView={5} spaceBetween={10}>
-      {slidesImgs.map((img, index) => (
-        <SlideContent key={index} imageUrl={img} alt="sliderImg"></SlideContent>
-      ))}
+      <SwipperSlide>
+        <div className="slide-content flex">
+          {slidesImgs.map((img, index) => (
+            <SlideContent
+              key={index}
+              imageUrl={img}
+              alt="sliderImg"
+            ></SlideContent>
+          ))}
+        </div>
+      </SwipperSlide>
     </SwipperContainer>
   );
 };
