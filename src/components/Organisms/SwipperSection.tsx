@@ -7,9 +7,13 @@ export const SwipperSection: React.FC = () => {
       <ImageSlider />
 
       <div className="description">
-        <HeadingAtom className="swipper-title">Coming Soon...</HeadingAtom>
+        <HeadingAtom className="swipper-title">
+          <h1>Coming Soon...</h1>
+        </HeadingAtom>
         <ParagraphAtom className="swipper-paragraph">
-          <strong>”Dashboard” </strong> to view and control your business
+          <p>
+            <span>”Dashboard” </span> to view and control your business
+          </p>
         </ParagraphAtom>
         <ButtonAtom>Join our waiting list</ButtonAtom>
       </div>
