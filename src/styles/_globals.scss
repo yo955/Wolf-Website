@@ -1,0 +1,21 @@
+// tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-weight: $font-regular;
+}
+h1 {
+  font-family: $font-stack;
+  font-weight: $font-bold;
+  color: $secondary-color;
+}
+
+p {
+  font-family: $font-stack;
+  font-weight: $font-medium;
+}
