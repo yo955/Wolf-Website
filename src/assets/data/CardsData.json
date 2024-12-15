@@ -1,0 +1,26 @@
+[
+  {
+    "imageUrl": "/images/plan-basic.png",
+    "title": "Basic Plan",
+    "paragraph": "This is a basic pricing plan.",
+    "listItem": ["Feature 1", "Feature 2", "Feature 3"],
+    "buttonText": "Select Plan",
+    "icon": ""
+  },
+  {
+    "imageUrl": "/images/plan-standard.png",
+    "title": "Standard Plan",
+    "paragraph": "This is a standard pricing plan.",
+    "listItem": ["Feature A", "Feature B", "Feature C"],
+    "buttonText": "Select Plan",
+    "icon": "ImportantDevicesIcon"
+  },
+  {
+    "imageUrl": "/images/plan-premium.png",
+    "title": "Premium Plan",
+    "paragraph": "This is a premium pricing plan.",
+    "listItem": ["Feature X", "Feature Y", "Feature Z"],
+    "buttonText": "Select Plan",
+    "icon": "PhoneAndroidIcon "
+  }
+]

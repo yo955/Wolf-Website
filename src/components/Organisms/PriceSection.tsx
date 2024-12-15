@@ -1,5 +1,13 @@
 import { HeadingAtom, ParagraphAtom } from "../Atoms";
-import PriceCards from "../Molecules/PriceCards";
+import { CardItem } from "../Molecules/CardItem";
+import CardsData from "@/assets/data/CardsData.json";
+import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+
+const iconMap: { [key: string]: React.ReactNode } = {
+  ImportantDevicesIcon: <ImportantDevicesIcon />,
+  PhoneAndroidIcon: <PhoneAndroidIcon />,
+};
 
 export const PriceSection: React.FC = () => {
   return (
@@ -14,7 +22,18 @@ export const PriceSection: React.FC = () => {
           </HeadingAtom>
         </div>
         <div className="price-cards">
-          <PriceCards />
+          {CardsData.length > 0 &&
+            CardsData.map((card, index) => (
+              <CardItem
+                key={index}
+                imageUrl={card.imageUrl}
+                title={card.title}
+                paragraph={card.paragraph}
+                listItem={card.listItem}
+                buttonText={card.buttonText}
+                icon={iconMap[card.icon]}
+              />
+            ))}
         </div>
       </div>
     </div>
