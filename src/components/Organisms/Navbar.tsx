@@ -7,7 +7,7 @@ import IconButton from "../atoms/IconButton";
 import DrawerMenu from "../molecules/DrawerMenu";
 import { CiMenuFries } from "react-icons/ci";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
+import img from "../../public/images/logo.png";
 const Navbar: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
   const isDesktop = useMediaQuery("(min-width:600px)");
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     <div className="NAVBAR">
       <div className="navbar-content">
         <Link href="/">
-          <img src="/logo.png" alt="Logo" className="logo" />
+          <img src="/images/Nav/logo.png" alt="Logo" className="logo" />
         </Link>
         {isDesktop && (
           <>

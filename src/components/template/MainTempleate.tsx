@@ -1,12 +1,15 @@
 // import { ContainerImg } from "../Atoms/ContainerImg";
 import { SwipperSection } from "../Organisms";
-import Navbar from "../Organisms/Navbar";
+import Home from "../Organisms/Clientslider-Organisms";
+// import Navbar from "../Organisms/Navbar";
 import HeaderSection from "./HeaderSection";
 export const MainTempleate = () => {
   return (
-    <div >
-      <HeaderSection />
-
+    <div>
+      <div className="headerSection">
+        <HeaderSection />
+      </div>
+      <Home />
       <SwipperSection />
     </div>
   );
