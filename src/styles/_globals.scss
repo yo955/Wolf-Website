@@ -3,15 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
-// fonts
-@font-face {
-  font-family: "Poppins";
-  src: url('');
-}
-
 body {
   font-family: $font-stack;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
+  background-color: $primary-color;
+  color: $primary-color;
+  font-weight: $font-regular;
+}
+h1 {
+  font-family: $font-stack;
+  font-weight: $font-bold;
+  color: $secondary-color;
+}
+
+p {
+  font-family: $font-stack;
+  font-weight: $font-medium;
 }
