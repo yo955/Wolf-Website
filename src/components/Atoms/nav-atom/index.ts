@@ -1,0 +1,1 @@
+export { ContainerImg } from "../ContainerImg";

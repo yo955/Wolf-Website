@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+.slide-image {
+  width: 302px;
+  height: 400px;
+}
+
+.swipper-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-block: 20px;
+  text-align: center;
+  gap: 1px;
+}
+.swipper-section .description {
+  margin-block: 15px;
+}
+
+.description .swipper-title h1 {
+  font-weight: 400 !important;
+}
+.description .swipper-paragraph span {
+  font-weight: 600;
+}
+
+.headerSection {
+  width: 100%;
+  height: 530px;
+  top: 62px;
+  gap: 0px;
+  opacity: 0px;
+  background-image: url("/images/Nav/section.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.headerSection .headerText {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 72px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(#ECECEC), to(rgba(236, 236, 236, 0.2)));
+  background: linear-gradient(to right, #ECECEC, rgba(236, 236, 236, 0.2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.headerSection .headerTextSmall {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #E1E1E2;
+}
