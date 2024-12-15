@@ -1,9 +1,10 @@
-@mixin flex($justify: center, $align: center, $direction: row, $gap: 0) {
+@mixin flex($justify: center, $align: center, $direction: row, $gap: 0,$Wrap:nowrap) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
   gap: $gap;
+  flex-wrap: $Wrap;
 }
 
 @mixin text-center {
@@ -18,4 +19,18 @@
 
 @mixin section {
   margin-block: $margin-section;
+}
+
+@mixin black-btn {
+  width: calc(100% - 2rem);
+  margin-block: 1rem;
+  height: 48px;
+  border-radius: 2rem;
+  border: 0.5px solid $border-black-btn;
+  background-color: $bg-black-btn;
+  padding: 12px 2rem;
+  text-align: center;
+  color: $primary-color;
+  font-size: 1rem;
+  font-family: $font-regular;
 }

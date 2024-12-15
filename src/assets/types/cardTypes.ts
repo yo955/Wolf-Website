@@ -5,4 +5,6 @@ export interface CardProps {
   listItem?: string[];
   buttonText?: string;
   icon?: React.ReactNode;
+  chat?: string;
+  description?: string;
 }

@@ -25,3 +25,6 @@ p {
 .sectoin {
   @include section;
 }
+.black-btn {
+  @include black-btn;
+}

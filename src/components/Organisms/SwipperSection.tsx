@@ -15,7 +15,7 @@ export const SwipperSection: React.FC = () => {
             <span>”Dashboard” </span> to view and control your business
           </p>
         </ParagraphAtom>
-        <ButtonAtom>Join our waiting list</ButtonAtom>
+        <ButtonAtom className="black-btn">Join our waiting list</ButtonAtom>
       </div>
     </div>
   );

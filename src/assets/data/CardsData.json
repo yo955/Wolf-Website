@@ -1,26 +1,31 @@
 [
   {
     "imageUrl": "/images/plan-basic.png",
-    "title": "Basic Plan",
-    "paragraph": "This is a basic pricing plan.",
-    "listItem": ["Feature 1", "Feature 2", "Feature 3"],
-    "buttonText": "Select Plan",
-    "icon": ""
+    "title": "Flexible Pricing for Companies of All Sizes.",
+    "description": "",
+    "paragraph": "",
+    "listItem": ["Web App", "Dashboard", "Mobile App", "Landing page"],
+    "buttonText": "Book a Free 15-min call",
+    "icon": "",
+    "chat": "Prefer E-mail? Let’s Chat"
   },
   {
     "imageUrl": "/images/plan-standard.png",
-    "title": "Standard Plan",
-    "paragraph": "This is a standard pricing plan.",
-    "listItem": ["Feature A", "Feature B", "Feature C"],
-    "buttonText": "Select Plan",
-    "icon": "ImportantDevicesIcon"
+    "title": "Landing Page",
+    "description": "✨Most Popular✨ ",
+    "paragraph": "A well-designed landing page can be effective for a variety of businesses.",
+    "listItem": ["E-commerce", "Services", "Events", "Lead generation"],
+    "buttonText": "Get Yours Now!",
+    "icon": "ImportantDevicesIcon",
+    "chat": "Prefer E-mail? Let’s Chat"
   },
   {
     "imageUrl": "/images/plan-premium.png",
-    "title": "Premium Plan",
-    "paragraph": "This is a premium pricing plan.",
-    "listItem": ["Feature X", "Feature Y", "Feature Z"],
-    "buttonText": "Select Plan",
+    "title": "Mobile App",
+    "description": "Perfect 👌",
+    "paragraph": "For Your Business to enhances engagement and if you want to strengthening your brand loyalty.",
+    "listItem": [],
+    "buttonText": "",
     "icon": "PhoneAndroidIcon "
   }
 ]

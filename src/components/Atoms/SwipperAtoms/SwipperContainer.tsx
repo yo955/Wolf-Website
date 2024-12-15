@@ -25,7 +25,7 @@ export const SwipperContainer: React.FC<SwipperContainerprops> = ({
       slidesPerView={slidesPerView}
       spaceBetween={spaceBetween}
       pagination={{ clickable: true }}
-      navigation
+      
     >
       {children}
     </Swiper>
