@@ -1,5 +1,21 @@
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+@mixin flex($justify: center, $align: center, $direction: row, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin container {
+  padding-inline: $padding-inline;
+  width: calc(100% - $padding-inline);
+  margin-inline: auto;
+}
+
+@mixin section {
+  margin-block: $margin-section;
+}

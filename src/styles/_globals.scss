@@ -19,3 +19,9 @@ p {
   font-family: $font-stack;
   font-weight: $font-medium;
 }
+.center {
+  @include text-center;
+}
+.sectoin {
+  @include section;
+}

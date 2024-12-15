@@ -1,0 +1,10 @@
+.price-section {
+  @include section;
+  .price-container {
+    @include container;
+    @include text-center;
+  }
+  .price-cards {
+    background-color: $bg-gray;
+  }
+}

@@ -1,7 +1,8 @@
 // colors
 $primary-color: #ffffff;
 $secondary-color: #000000;
-
+$bg-gray: #e7e7e7;
+$border: #d7d7d7;
 // fonts
 $font-stack: "Poppins", sans-serif;
 $font-regular: 400;
@@ -15,3 +16,5 @@ $breakPoints: (
   xl: 1200px,
   xxl: 1400px,
 );
+$margin-section: 5rem;
+$padding-inline:10rem

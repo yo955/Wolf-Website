@@ -4,9 +4,9 @@
 @import "./globals";
 @import "./fonts";
 @import "./mediaquery";
+@import "./normalize";
 // slider styles
-@import "./slider/slide-content";
-@import "./slider/swipper-container";
-@import "./slider/swipper-section";
+@import "./slider/index.scss";
 
-// files
+// price
+@import "./price/index.scss";
