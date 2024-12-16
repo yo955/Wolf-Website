@@ -5,8 +5,7 @@ interface TextProps {
   className?: string;
 }
 
-const Text: React.FC<TextProps> = ({ text, className }) => {
+export const Text: React.FC<TextProps> = ({ text, className }) => {
   return <div className={className}>{text}</div>;
 };
 
-export default Text;

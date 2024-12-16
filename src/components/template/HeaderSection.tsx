@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Organisms/Navbar";
+import {Navbar} from "../Organisms/Navbar";
 // import Avatar from "../Atoms/Avatar";
 function HeaderSection() {
   return (

@@ -1,14 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "../atoms/Link";
-import Button from "../atoms/Button";
-import IconButton from "../atoms/IconButton";
-import DrawerMenu from "../molecules/DrawerMenu";
+import Link from "../Atoms/nav-atom/Link";
+import {Button} from "../Atoms/nav-atom";
+import {IconButton} from "../Atoms/nav-atom/IconButton";
+import { DrawerMenu } from "../Molecules/nav-molecules/DrawerMenu";
 import { CiMenuFries } from "react-icons/ci";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import img from "../../public/images/logo.png";
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
   const isDesktop = useMediaQuery("(min-width:600px)");
   const [state, setState] = useState({
@@ -19,7 +18,7 @@ const Navbar: React.FC = () => {
     setState({ bottom: open });
   };
 
-  const handleClick = () => {
+   const handleClick = () => {
     window.location.href = "tel:+01550227582";
   };
 
@@ -56,4 +55,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+ 

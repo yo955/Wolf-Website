@@ -2,9 +2,9 @@ import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
 import Container from "@mui/material/Container";
-import Text from "../Atoms/Text";
+import { Text } from "../Atoms/slider/Text";
 import Box from "@mui/material/Box";
-function OurServicesCard() {
+export function OurServices() {
   const arr = [
     {
       id: "1",
@@ -216,10 +216,32 @@ function OurServicesCard() {
         }
         className="textListen"
       />
-      <Container className="container">
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: { xs: "column", sm: "row" }, 
+        }}
+      >
         {arr.map((e) => (
           <div key={e.id} style={{ mb: 20 }}>
-            <Card className="card">
+            <Card
+              sx={{
+                height: "256px",
+                border: "none",
+                borderRadius: "16px",
+                overflow: "hidden",
+                position: "relative",
+                backgroundColor: "white",
+                cursor: "pointer",
+                padding: "16px",
+                gap: "16px",
+                "&:hover": {
+                  background: "linear-gradient(45deg,#F0F0F0, #E0E0E0)",
+                },
+              }}
+            >
               <CardContent sx={{ textAlign: "center" }}>
                 <Box
                   sx={{
@@ -261,5 +283,3 @@ function OurServicesCard() {
     </section>
   );
 }
-
-export default OurServicesCard;

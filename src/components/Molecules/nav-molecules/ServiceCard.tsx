@@ -1,9 +1,8 @@
 import React from 'react';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
-import Icon from '../atoms/Icon';
-import Description from '../atoms/Description';
-import Text from '../atoms/Text';
+import {Icon,Description,Text} from '@/components/Atoms/slider';
+
 
 interface ServiceCardProps {
   icon: React.ReactNode;

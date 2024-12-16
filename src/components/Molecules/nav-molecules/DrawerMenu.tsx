@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Link from '../atoms/Link';
+import Link from '@/components/Atoms/nav-atom/Link';
 
 interface DrawerMenuProps {
   open: boolean;

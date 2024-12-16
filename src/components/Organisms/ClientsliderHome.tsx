@@ -20,22 +20,11 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Container from "@mui/material/Container";
 import Image from "next/image";
 import cardData from "../../data/cardData";
-import Text from "../Atoms/Text";
+import { Text } from "@/components/Atoms/slider/Text";
 
-const labels = {
-  0.5: "Useless",
-  1: "Useless+",
-  1.5: "Poor",
-  2: "Poor+",
-  2.5: "Ok",
-  3: "Ok+",
-  3.5: "Good",
-  4: "Good+",
-  4.5: "Excellent",
-  5: "Excellent+",
-};
 
-export default function Home() {
+
+export function ClientsliderHome() {
   const value = 3.5;
   return (
     <Container sx={{ mt: 10, mb: 20 }} className="con">

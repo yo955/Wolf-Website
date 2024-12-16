@@ -5,8 +5,7 @@ interface DescriptionProps {
   text: string;
 }
 
-const Description: React.FC<DescriptionProps> = ({ text }) => {
+export const Description: React.FC<DescriptionProps> = ({ text }) => {
   return <Typography>{text}</Typography>;
 };
 
-export default Description;
