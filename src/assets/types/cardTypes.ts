@@ -7,4 +7,7 @@ export interface CardProps {
   icon?: React.ReactNode;
   chat?: string;
   description?: string;
+  text?: string;
+  btnclass?: string;
+  buttonsArray?: string[];
 }

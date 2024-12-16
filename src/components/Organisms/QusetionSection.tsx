@@ -1,13 +1,12 @@
-import React from 'react'
+import { LeftQusteion, RightQusteion } from "../Molecules";
 
-// interface questionProps {
-    
-// }
-
-export const QusetionSection = ( )=> {
-    return (
-        <div>
-            QusetionSection
-        </div>
-    )
-}
+export const QusetionSection = () => {
+  return (
+    <div className="qusetion-section">
+      <div className="main-container">
+        <LeftQusteion />
+        <RightQusteion />
+      </div>
+    </div>
+  );
+};

@@ -1,4 +1,10 @@
-@mixin flex($justify: center, $align: center, $direction: row, $gap: 0,$Wrap:nowrap) {
+@mixin flex(
+  $justify: center,
+  $align: center,
+  $direction: row,
+  $gap: 0,
+  $Wrap: nowrap
+) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -19,6 +25,10 @@
 
 @mixin section {
   margin-block: $margin-section;
+}
+
+@mixin radius {
+  border-radius: $main-radius;
 }
 
 @mixin black-btn {

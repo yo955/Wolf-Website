@@ -1,0 +1,56 @@
+.left-container {
+  .header-description {
+    .paragraph {
+      p {
+      }
+    }
+    .title {
+      h1 {
+      }
+    }
+  }
+  .card-descriptions {
+    background-color: $bg-gray;
+    width: 503px;
+    height: 305px;
+    position: relative;
+    overflow: hidden;
+    @include radius;
+    padding: 8px;
+    box-sizing: border-box;
+    @include flex(center, center, row, 0.2rem, wrap);
+    z-index: -1;
+
+    .card-background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      background-image: url("/images/svg/qusetion-card/card.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+      margin: 10px;
+      @include radius;
+    }
+    .card-content {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      top: 1px;
+      bottom: 1px;
+      padding: 33px 24px;
+      color: $text-black;
+      z-index: 10;
+      .card {
+        z-index: -5;
+        .card-top {
+          width: 248px;
+          @include flex(space-between, center, row, 0.5rem, nowrap);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.qusetion-section {
+  @include section;
+  .main-container {
+    @include container;
+    @include flex(space-between, start, nowrap, 1rem, nowrap);
+    flex: 1;
+  }
+}

@@ -12,6 +12,9 @@ export const CardItem: React.FC<CardProps> = ({
   icon,
   chat,
   description,
+  text,
+  btnclass = "black-btn",
+  buttonsArray = [],
 }) => {
   return (
     <div className="card">
@@ -21,10 +24,15 @@ export const CardItem: React.FC<CardProps> = ({
           <ImgAtom
             src={imageUrl || ""}
             alt={title || ""}
-            width={100}
-            height={100}
+            width={65}
+            height={65}
             className="card-image"
           />
+        )}
+        {text && (
+          <HeadingAtom className="text">
+            <h1>{text}</h1>
+          </HeadingAtom>
         )}
       </div>
       <div className="card-description">
@@ -44,9 +52,21 @@ export const CardItem: React.FC<CardProps> = ({
           </ParagraphAtom>
         )}
         {listItem && <List items={listItem} />}
-        {buttonText && (
-          <ButtonAtom className="black-btn">{buttonText}</ButtonAtom>
+
+        {buttonText && !buttonsArray && (
+          <ButtonAtom className={btnclass}>{buttonText}</ButtonAtom>
         )}
+
+        {buttonsArray && buttonsArray.length > 0 && (
+          <div className="buttons-container">
+            {buttonsArray.map((btn, index) => (
+              <ButtonAtom key={index} className={btnclass}>
+                {btn}
+              </ButtonAtom>
+            ))}
+          </div>
+        )}
+
         {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
       </div>
     </div>

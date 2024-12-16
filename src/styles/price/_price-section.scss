@@ -17,9 +17,9 @@
   }
   .price-cards {
     background-color: $bg-gray;
-    border-radius: 24px;
     overflow: hidden;
     padding: 1rem;
+    @include radius;
     @include flex(center, space-between, row, 1rem, wrap);
     .card {
       @include flex(left, space-between, row, 0, wrap);

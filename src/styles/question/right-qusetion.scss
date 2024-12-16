@@ -1,0 +1,11 @@
+.right-section {
+  max-width: 628px;
+  .right-title{
+    @include flex(space-between, center, row, 0.2rem, nowrap);
+  }
+  
+  .main-question {
+    @include flex(space-between, center, row, 0.2rem, nowrap);
+  }
+  
+}
