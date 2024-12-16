@@ -1,3 +1,4 @@
+@import '../_variables.scss';
 .container {
     display: flex;
     justify-content: space-between;
@@ -12,12 +13,12 @@
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    background-color: white;
+    background-color: $primary-color;
     cursor: pointer;
     padding: 16px;
     gap: 16px;
     &:hover {
-        background: linear-gradient(45deg, #F0F0F0, #E0E0E0);
+        background: linear-gradient(45deg, $color1, $color2);
     }
 }
 
@@ -28,5 +29,5 @@
     gap: 12px;
     border-radius: 8px 0px 0px 0px;
     opacity: 0px;
-    background-color: #B4DD7E;
+    background-color: $ouer-color;
 }

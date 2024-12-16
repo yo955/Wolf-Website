@@ -1,9 +1,10 @@
+@import '../_variables.scss';
 .textListen {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
     line-height: 27px;
-    color: #494949;
+    color: $color3;
 }
 
 .pairenttextclients {
@@ -18,7 +19,7 @@
         font-size: 32px;
         font-weight: 500;
         line-height: 48px;
-        color: #121212;
+        color: $button-color;
         text-align: center;
     }
     @media (max-width: 750px) {
@@ -31,7 +32,7 @@
             font-weight: 500;
             line-height: 27px;
             text-align: center;
-            color: #121212;
+            color: $button-color;
         }
     }
 }
@@ -94,7 +95,7 @@
     .swiper-pagination-bullet {
         width: 10px;
         height: 8px;
-        background-color: gray;
+        background-color: $color3;
         border-radius: 50%;
         transition: all 0.3s ease;
         opacity: 0.5;
@@ -102,7 +103,7 @@
             display: none;
         }
         &-active {
-            background-color: #000;
+            background-color: $secondary-color;
             width: 30px;
             border-radius: 16px;
             opacity: 1;
