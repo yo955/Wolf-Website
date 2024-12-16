@@ -17,11 +17,20 @@ export const LeftQusteion = () => {
         <div className="card-background"></div>
         <div className="card-content">
           <CardItem
-            btnclass="black-btn"
+            btnclass="contact-btn"
             imageUrl="/images/svg/qusetion-card/Avatar.svg"
             text="Didn’t find the answer?!"
             paragraph="I’m human being, just like you - ask me anything."
-            buttonsArray={["E-mail US", "+966 59 744 2483"]}
+            buttonsArray={[
+              {
+                text: "E-mail US",
+                image: "/images/svg/qusetion-card/google.svg",
+              },
+              {
+                text: "+966 59 744 2483",
+                image: "/images/svg/qusetion-card/whats.svg",
+              },
+            ]}
           />
         </div>
       </div>

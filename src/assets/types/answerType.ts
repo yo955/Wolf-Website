@@ -1,3 +1,3 @@
 export interface answerprops {
-  answer: string;
+  answer: string | string[];
 }

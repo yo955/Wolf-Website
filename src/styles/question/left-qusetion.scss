@@ -1,11 +1,18 @@
 .left-container {
+  max-width: 519px;
   .header-description {
+    margin-block: 1.3rem;
     .paragraph {
       p {
+        @include main-parargraph;
       }
     }
     .title {
+      padding-right: 4rem;
+      display: flex;
+      flex-wrap: wrap;
       h1 {
+        @include main-title;
       }
     }
   }
@@ -44,6 +51,15 @@
       padding: 33px 24px;
       color: $text-black;
       z-index: 10;
+      .contact-btn {
+        &:nth-child(1),
+        &:nth-child(2) {
+          @include contact-btn;
+        }
+        &:nth-child(2) {
+          background: $linear-gradient-btn;
+        }
+      }
       .card {
         z-index: -5;
         .card-top {

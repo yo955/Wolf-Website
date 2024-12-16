@@ -1,3 +1,3 @@
 export interface qusetionprops {
-  qusetion: string;
+  qusetion: string | string[];
 }

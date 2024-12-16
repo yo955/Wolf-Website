@@ -1,6 +1,6 @@
 [
-  { "anwer": "first Answer" },
-  { "anwer": "second Answer" },
-  { "anwer": "third Answer" },
-  { "anwer": "forth Answer" }
+  { "answer": "first Answer" },
+  { "answer": "second Answer" },
+  { "answer": "third Answer" },
+  { "answer": "forth Answer" }
 ]

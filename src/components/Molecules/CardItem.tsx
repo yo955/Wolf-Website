@@ -14,7 +14,7 @@ export const CardItem: React.FC<CardProps> = ({
   description,
   text,
   btnclass = "black-btn",
-  buttonsArray = [],
+  buttonsArray,
 }) => {
   return (
     <div className="card">
@@ -37,12 +37,12 @@ export const CardItem: React.FC<CardProps> = ({
       </div>
       <div className="card-description">
         {description && (
-          <ParagraphAtom className="card-paragraph">
+          <ParagraphAtom className="card-description">
             <p>{description}</p>
           </ParagraphAtom>
         )}
         {title && (
-          <HeadingAtom className="card-paragraph">
+          <HeadingAtom className="card-title">
             <h1>{title}</h1>
           </HeadingAtom>
         )}
@@ -61,7 +61,8 @@ export const CardItem: React.FC<CardProps> = ({
           <div className="buttons-container">
             {buttonsArray.map((btn, index) => (
               <ButtonAtom key={index} className={btnclass}>
-                {btn}
+                <ImgAtom src={btn.image} alt="btn-img" width={24} height={24} />
+                {btn.text}
               </ButtonAtom>
             ))}
           </div>

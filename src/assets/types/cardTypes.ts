@@ -9,5 +9,5 @@ export interface CardProps {
   description?: string;
   text?: string;
   btnclass?: string;
-  buttonsArray?: string[];
+  buttonsArray: { text: string; image: string }[];
 }
