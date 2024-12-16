@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar} from "../Organisms/Navbar";
+import { Navbar } from "../Organisms/Navbar";
 // import Avatar from "../Atoms/Avatar";
 function HeaderSection() {
   return (
@@ -7,7 +7,7 @@ function HeaderSection() {
       <div>
         <Navbar />
       </div>
-      <div className="header"> 
+      <div className="header">
         <h1 className="headerText">
           Helping Brands to Stand
           <br />
@@ -22,6 +22,28 @@ function HeaderSection() {
         <div className="avatar">
           <img src="/images/Nav/islamAvatar.png" alt="" />
           <p>Free 15-min call</p>
+        </div>
+        <div className="Avilable">
+          <span style={{paddingRight: "5px"}}>
+            <svg
+              width="16"
+              height="17"
+              viewBox="0 0 16 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                y="0.5"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#00FF22"
+                fill-opacity="0.25"
+              />
+              <rect x="4" y="4.5" width="8" height="8" rx="4" fill="#00CE1B" />
+            </svg>
+          </span>
+          <span className="Avilable-text">Available now!</span>
         </div>
       </div>
     </div>
