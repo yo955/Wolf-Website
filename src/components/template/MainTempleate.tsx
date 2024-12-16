@@ -1,9 +1,6 @@
-
-
-
 // import { ContainerImg } from "../Atoms/ContainerImg";
 import { OurServices, SwipperSection } from "@/components/Organisms";
-import {ClientsliderHome} from "@/components/Organisms/ClientsliderHome";
+import { ClientsliderHome, OurWork } from "@/components/Organisms";
 // import Navbar from "../Organisms/Navbar";
 import HeaderSection from "./HeaderSection";
 export const MainTempleate = () => {
@@ -13,9 +10,9 @@ export const MainTempleate = () => {
         <HeaderSection />
       </div>
       <ClientsliderHome />
-      <OurServices/>
+      <OurServices />
+      <OurWork />
       <SwipperSection />
-    
     </div>
   );
 };
