@@ -17,26 +17,36 @@ export const CardItem: React.FC<CardProps> = ({
     <div className="card">
       <div className="card-top">
         {icon && <div className="icon">{icon}</div>}
-        <ImgAtom
-          src={imageUrl || ""}
-          alt={title || ""}
-          width={100}
-          height={100}
-          className="card-image"
-        />
+        {imageUrl && (
+          <ImgAtom
+            src={imageUrl || ""}
+            alt={title || ""}
+            width={100}
+            height={100}
+            className="card-image"
+          />
+        )}
       </div>
       <div className="card-description">
         {description && (
           <ParagraphAtom className="card-paragraph">
-            {description}
+            <p>{description}</p>
           </ParagraphAtom>
         )}
-        {title && <HeadingAtom className="card-paragraph">{title}</HeadingAtom>}
+        {title && (
+          <HeadingAtom className="card-paragraph">
+            <h1>{title}</h1>
+          </HeadingAtom>
+        )}
         {paragraph && (
-          <ParagraphAtom className="card-paragraph">{paragraph}</ParagraphAtom>
+          <ParagraphAtom className="card-paragraph">
+            <p>{paragraph}</p>
+          </ParagraphAtom>
         )}
         {listItem && <List items={listItem} />}
-        {buttonText && <ButtonAtom className="black-btn" >{buttonText}</ButtonAtom>}
+        {buttonText && (
+          <ButtonAtom className="black-btn">{buttonText}</ButtonAtom>
+        )}
         {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
       </div>
     </div>
