@@ -5,4 +5,7 @@ export { ParagraphAtom } from "./ParagraphAtom";
 export { ListItemAtom } from "./ListItemAtom";
 export { QusetionAtom } from "./QuestionAtom";
 export { AnswerAtom } from "./Answer";
+export { LinkAtom } from "./LinkAtom";
+export { IconAtom } from "./IconAtom";
+export { LogoAtom } from "./LogoAtom";
 export * from "@/components/Atoms/SwipperAtoms";
