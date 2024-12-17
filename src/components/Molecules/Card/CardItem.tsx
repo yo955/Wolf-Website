@@ -30,8 +30,8 @@ export const CardItem: React.FC<CardProps> = ({
           <ImgAtom
             src={imageUrl || ""}
             alt={title || ""}
-            width={65}
-            height={65}
+            width={100}
+            height={100}
             className="card-image"
           />
         )}
@@ -42,16 +42,17 @@ export const CardItem: React.FC<CardProps> = ({
         )}
       </div>
       <div className="card-description">
-        {description && (
-          <ParagraphAtom className="card-description">
-            <p>{description}</p>
-          </ParagraphAtom>
-        )}
         {title && (
           <HeadingAtom className="card-title">
             <h1>{title}</h1>
           </HeadingAtom>
         )}
+        {description && (
+          <ParagraphAtom className="card-description">
+            <p>{description}</p>
+          </ParagraphAtom>
+        )}
+
         {paragraph && (
           <ParagraphAtom className="card-paragraph">
             <p>{paragraph}</p>

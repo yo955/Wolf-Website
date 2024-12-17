@@ -34,6 +34,7 @@ export const PriceSection: React.FC = () => {
                 icon={iconMap[card.icon]}
                 chat={card.chat}
                 offer={card.offer}
+                description={card.description}
               />
             ))}
         </div>
