@@ -1,0 +1,39 @@
+.right-section {
+  .main-content {
+    max-height: 155px;
+    margin-bottom: 2rem;
+    @include flex(start, start, column, 1rem, nowrap);
+  }
+  h1 {
+    font-weight: $font-bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: $dark-color;
+  }
+  p {
+    font-weight: $font-regular;
+    font-size: 18px;
+    line-height: 25px;
+    color: $para-color;
+    padding-right: 2rem;
+    text-wrap: wrap;
+  }
+  max-width: 628px;
+  .right-title {
+    width: 100%;
+    @include flex(space-between, center, row, 0.2rem, nowrap);
+  }
+  .qa-item {
+    @include flex(center, "", column, "", nowrap);
+    height: 5.62rem;
+    border-bottom: 1px solid $dark-color;
+  }
+
+  .main-question {
+    @include flex(space-between, center, row, 0.2rem, nowrap);
+  }
+  .question-header {
+    @include flex(space-between, center, row, 0.2rem, nowrap);
+    cursor: pointer;
+  }
+}

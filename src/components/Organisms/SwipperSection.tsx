@@ -3,20 +3,29 @@ import { ImageSlider } from "../Molecules";
 
 export const SwipperSection: React.FC = () => {
   return (
-    <div className="swipper-section">
+    <section className="swipper-section">
+      
       <ImageSlider />
 
-      <div className="description">
-        <HeadingAtom className="swipper-title">
+      <div className="description mt-8 px-4 text-center">
+        
+        <HeadingAtom className="swipper-title text-2xl font-semibold text-primary">
           <h1>Coming Soon...</h1>
         </HeadingAtom>
-        <ParagraphAtom className="swipper-paragraph">
+
+        
+        <ParagraphAtom className="swipper-paragraph text-lg text-medium mt-4">
           <p>
-            <span>”Dashboard” </span> to view and control your business
+            <span className="font-bold">”Dashboard” </span> to view and control
+            your business
           </p>
         </ParagraphAtom>
-        <ButtonAtom>Join our waiting list</ButtonAtom>
+
+     
+        <ButtonAtom className="black-btn mt-6 px-6 py-3 text-white rounded-lg hover:bg-black">
+          Join our waiting list
+        </ButtonAtom>
       </div>
-    </div>
+    </section>
   );
 };

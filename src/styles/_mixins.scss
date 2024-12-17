@@ -1,5 +1,86 @@
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flex(
+  $justify: center,
+  $align: center,
+  $direction: row,
+  $gap: 0,
+  $Wrap: nowrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: $Wrap;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin section {
+  margin-block: $margin-section;
+}
+
+@mixin container {
+  padding-inline: $padding-inline;
+  width: calc(100% - $padding-inline);
+  margin-inline: auto;
+}
+
+@mixin radius {
+  border-radius: $main-radius;
+}
+
+@mixin mix-color($direction, $first, $second, $third) {
+  background: linear-gradient($direction, $first, $second, $third);
+}
+
+@mixin black-btn {
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  margin-block: 1rem;
+  height: 48px;
+  border-radius: 12px;
+  border: 0.5px solid $border-black-btn;
+  background-color: $bg-black-btn;
+  padding: 12px 2rem;
+  text-align: center;
+  color: $primary-color;
+  font-size: 1rem;
+  font-family: $font-regular;
+  cursor: pointer;
+}
+@mixin contact-btn {
+  width: calc(100% - 0.5rem);
+  overflow: hidden;
+  margin-block: 1rem;
+  height: 48px;
+  border-radius: 12px;
+  border: 0.5px solid $border;
+  background-color: $bg-white-btn;
+  padding: 12px 2rem;
+  text-align: center;
+  color: $secondary-color;
+  font-size: 1rem;
+  font-family: $font-regular;
+  cursor: pointer;
+  @include flex(center, center, row, 0.5rem, nowrap);
+}
+@mixin main-parargraph {
+  @include for-desktop {
+    font-size: 1rem;
   }
+  font-weight: $font-regular;
+  font-size: $para-font-size;
+  line-height: $para-line-height;
+  color: $para-color;
+}
+@mixin main-title {
+  @include for-desktop {
+    font-size: 18px;
+  }
+  font-weight: $font-medium;
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  color: $title-color;
+}

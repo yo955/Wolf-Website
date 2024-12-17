@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Flexible Pricing for Companies of All Sizes.",
+    "description": "",
+    "paragraph": "",
+    "listItem": ["Web App", "Dashboard", "Mobile App", "Landing page"],
+    "buttonText": "Book a Free 15-min call",
+    "icon": "",
+    "chat": "Prefer E-mail? Let’s Chat",
+    "offer": "We Offer : "
+  },
+  {
+    "imageUrl": "/images/svg/price-cards/star.svg",
+    "title": "Landing Page",
+    "description": "✨Most Popular✨ ",
+    "paragraph": "A well-designed landing page can be effective for a variety of businesses.",
+    "listItem": ["E-commerce", "Services", "Events", "Lead generation"],
+    "buttonText": "Get Yours Now!",
+    "icon": "ImportantDevicesIcon",
+    "chat": "Prefer E-mail? Let’s Chat",
+    "offer": "It is Perfect For:"
+  },
+  {
+    "imageUrl": "/images/svg/price-cards/circle.svg",
+    "title": "Mobile App",
+    "description": "Perfect 👌",
+    "paragraph": "For Your Business to enhances engagement and if you want to strengthening your brand loyalty.",
+    "listItem": [],
+    "buttonText": "",
+    "icon": "PhoneAndroidIcon"
+  }
+]

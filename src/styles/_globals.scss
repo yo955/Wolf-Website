@@ -19,3 +19,29 @@ p {
   font-family: $font-stack;
   font-weight: $font-medium;
 }
+.center {
+  @include text-center;
+}
+.sectoin {
+  @include section;
+}
+.black-btn {
+  @include black-btn;
+}
+
+.card {
+  .text {
+    h1 {
+      color: $dark-color;
+      font-weight: $font-medium;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  p {
+    padding-block: 0.5rem;
+    color: $para-color;
+    font-size: 1rem;
+    line-height: 24px;
+  }
+}

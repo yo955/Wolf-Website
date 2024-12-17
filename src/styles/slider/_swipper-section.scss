@@ -1,19 +1,39 @@
 .swipper-section {
-  display: flex;
-  flex-direction: column;
-  margin-block: 20px;
-  text-align: center;
-  gap: 1px;
+  @include section;
+  @include flex(center, center, column, 1px);
+  @include text-center;
+
   .description {
     margin-block: 15px;
   }
 }
+
 .description {
+  h1,
+  p {
+    font-size: 24px;
+  }
+  @include for-desktop {
+    h1,
+    p {
+      font-size: 1rem;
+    }
+  }
   .swipper-title {
     h1 {
       font-weight: $font-regular !important;
     }
   }
+  .black-btn {
+    @include for-desktop {
+      min-width: 100%;
+    }
+    max-width: fit-content;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: $font-medium;
+  }
+
   .swipper-paragraph {
     span {
       font-weight: $font-bold;

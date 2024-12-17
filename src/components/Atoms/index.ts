@@ -3,4 +3,11 @@ export { HeadingAtom } from "./slider/HeadingAtom";
 export { ImgAtom } from "./ImgAtom";
 export { Image } from "./Image";
 export { ParagraphAtom } from "./ParagraphAtom";
-export * from "@/components/Atoms"
+export { ListItemAtom } from "./ListItemAtom";
+export { QusetionAtom } from "./QuestionAtom";
+export { AnswerAtom } from "./Answer";
+export { LinkAtom } from "./LinkAtom";
+export { IconAtom } from "./IconAtom";
+export { LogoAtom } from "./LogoAtom";
+export { Line } from "./Line";
+export * from "@/components/Atoms";
