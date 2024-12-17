@@ -1,4 +1,8 @@
-import { SlideContent, SwipperContainer, SwipperSlide } from "../Atoms";
+import {
+  SlideContent,
+  SwipperContainer,
+  SwipperSlide,
+} from "@/components/Atoms";
 
 export const ImageSlider: React.FC = () => {
   const mainbath = "/images/slider";

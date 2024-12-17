@@ -1,6 +1,5 @@
-import React from "react";
-import { HeadingAtom, ParagraphAtom } from "../Atoms";
-import { CardItem } from "./CardItem";
+import { HeadingAtom, ParagraphAtom } from "@/components/Atoms";
+import { CardItem } from "../Card";
 
 export const LeftQusteion = () => {
   return (

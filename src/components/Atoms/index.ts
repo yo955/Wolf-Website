@@ -8,4 +8,5 @@ export { AnswerAtom } from "./Answer";
 export { LinkAtom } from "./LinkAtom";
 export { IconAtom } from "./IconAtom";
 export { LogoAtom } from "./LogoAtom";
+export { Line } from "./Line";
 export * from "@/components/Atoms/SwipperAtoms";

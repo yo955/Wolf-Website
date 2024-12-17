@@ -1,6 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import { AnswerAtom, HeadingAtom, ParagraphAtom, QusetionAtom } from "../Atoms";
+import { useState } from "react";
+import {
+  AnswerAtom,
+  HeadingAtom,
+  ParagraphAtom,
+  QusetionAtom,
+} from "@/components/Atoms";
 import questions from "@/assets/data/Qusetion.json";
 import answers from "@/assets/data/Answer.json";
 
@@ -37,10 +42,7 @@ export const RightQusteion = () => {
         const answer = answers[index];
 
         return (
-          <div
-            key={index}
-            className="qa-item "
-          >
+          <div key={index} className="qa-item ">
             <div
               className="question-header mb-1"
               onClick={() => toggleAnswer(index)}

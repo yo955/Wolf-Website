@@ -1,7 +1,7 @@
 import React from "react";
-import { ButtonAtom, HeadingAtom, ImgAtom, ParagraphAtom } from "../Atoms";
-import { List } from "./ListItem";
 import { CardProps } from "@/assets/types/cardTypes";
+import { ButtonAtom, HeadingAtom, ImgAtom, ParagraphAtom } from "@/components/Atoms";
+import { List } from "./ListItem";
 
 export const CardItem: React.FC<CardProps> = ({
   imageUrl,

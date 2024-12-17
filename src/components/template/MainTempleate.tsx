@@ -1,7 +1,9 @@
-import { SwipperSection } from "../Organisms";
-import { FooterSection } from "../Organisms/FooterSection";
-import { PriceSection } from "../Organisms/PriceSection";
-import { QusetionSection } from "../Organisms/QusetionSection";
+import {
+  FooterSection,
+  PriceSection,
+  QusetionSection,
+  SwipperSection,
+} from "../Organisms";
 
 export const MainTempleate = () => {
   return (

@@ -1,5 +1,5 @@
 import { HeadingAtom, ParagraphAtom } from "../Atoms";
-import { CardItem } from "../Molecules/CardItem";
+import { CardItem } from "../Molecules";
 import CardsData from "@/assets/data/CardsData.json";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
@@ -32,6 +32,7 @@ export const PriceSection: React.FC = () => {
                 listItem={card.listItem}
                 buttonText={card.buttonText}
                 icon={iconMap[card.icon]}
+                buttonsArray={[]}
               />
             ))}
         </div>
