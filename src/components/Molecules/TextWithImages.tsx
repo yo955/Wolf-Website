@@ -1,7 +1,7 @@
 // src/components/Molecules/TextWithImages.tsx
 import React from 'react';
-import {Text} from '../Atoms/slider/Text';
-import {Image} from '../Atoms/Image';
+import {Text} from '@/components';
+import {Image} from '@/components';
 import Container from '@mui/material/Container';
 
 export const TextWithImages: React.FC = () => {

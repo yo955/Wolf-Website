@@ -1,4 +1,3 @@
-// src/components/Atoms/Image.tsx
 import React from 'react';
 
 interface ImageProps {
@@ -10,7 +9,7 @@ interface ImageProps {
 }
 
 export const Image: React.FC<ImageProps> = ({ src, alt, className, width, height }) => {
-  return <img src={src} alt={alt} className={className} style={{ width, height }} />;
+  return <Image src={src} alt={alt} className={className} width={width} height={height} />;
 };
 
 

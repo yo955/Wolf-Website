@@ -1,5 +1,4 @@
-import { ButtonAtom, HeadingAtom, ParagraphAtom } from "../Atoms";
-import { ImageSlider } from "../Molecules";
+import { ButtonAtom, HeadingAtom, ParagraphAtom,ImageSlider } from "@/components";
 
 export const SwipperSection: React.FC = () => {
   return (

@@ -5,7 +5,7 @@ import {
   HeadingAtom,
   ImgAtom,
   ParagraphAtom,
-} from "@/components/Atoms";
+} from "@/components";
 import { List } from "./ListItem";
 
 export const CardItem: React.FC<CardProps> = ({

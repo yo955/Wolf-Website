@@ -6,4 +6,3 @@ export { FooterSection } from "./FooterSection";
 export { QusetionSection } from "./QusetionSection";
 export {OurServices} from "./OurServices"
 export {OurWork} from "./OurWork"
-export * from "@/components/Organisms";

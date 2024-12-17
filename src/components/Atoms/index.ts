@@ -1,13 +1,18 @@
-export { ButtonAtom } from "./ButtonAtom";
-export { HeadingAtom } from "./slider/HeadingAtom";
-export { ImgAtom } from "./ImgAtom";
-export { Image } from "./Image";
-export { ParagraphAtom } from "./ParagraphAtom";
-export { ListItemAtom } from "./ListItemAtom";
-export { QusetionAtom } from "./QuestionAtom";
+export * from './nav-atom'
+export * from './slider'
+export * from './SwipperAtoms'
+
 export { AnswerAtom } from "./Answer";
-export { LinkAtom } from "./LinkAtom";
+export { ButtonAtom } from "./ButtonAtom";
 export { IconAtom } from "./IconAtom";
-export { LogoAtom } from "./LogoAtom";
+export { IconButton } from "./IconButton";
+export { Image } from "./Image";
+export { ImgAtom } from "./ImgAtom";
 export { Line } from "./Line";
-export * from "@/components/Atoms";
+export { LinkAtom } from "./LinkAtom";
+export { ListItemAtom } from "./ListItemAtom";
+export { LogoAtom } from "./LogoAtom";
+export { ParagraphAtom } from "./ParagraphAtom";
+export { QusetionAtom } from "./QuestionAtom";
+
+

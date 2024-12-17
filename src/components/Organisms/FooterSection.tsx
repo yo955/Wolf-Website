@@ -1,5 +1,4 @@
-import { Line, ParagraphAtom } from "../Atoms";
-import { FooterLogoSection, SocialMediaIcons } from "../Molecules";
+import { Line, ParagraphAtom ,FooterLogoSection, SocialMediaIcons } from "@/components";
 
 export const FooterSection: React.FC = () => (
   <footer className="footer-section">

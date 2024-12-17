@@ -1,4 +1,4 @@
-import { ListItemAtom } from "@/components/Atoms";
+import { ListItemAtom } from "@/components";
 
 interface ListProps {
   items: string[];

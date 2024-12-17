@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "../Atoms/nav-atom/Link";
-import {Button} from "../Atoms/nav-atom";
-import {IconButton} from "../Atoms/nav-atom/IconButton";
-import { DrawerMenu } from "../Molecules/nav-molecules/DrawerMenu";
+import {
+  Link,
+  Button,
+  IconButton,
+  DrawerMenu
+}  from '@/components';
 import { CiMenuFries } from "react-icons/ci";
 import useMediaQuery from "@mui/material/useMediaQuery";
 export const Navbar: React.FC = () => {

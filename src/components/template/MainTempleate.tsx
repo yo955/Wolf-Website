@@ -4,8 +4,8 @@ import {
   PriceSection,
   QusetionSection,
   OurServices, SwipperSection,
-} from "@/components/Organisms";
-import { ClientsliderHome, OurWork } from "@/components/Organisms";
+  ClientsliderHome, OurWork 
+} from "@/components";
 // import Navbar from "../Organisms/Navbar";
 import HeaderSection from "./HeaderSection";
 export const MainTempleate = () => {

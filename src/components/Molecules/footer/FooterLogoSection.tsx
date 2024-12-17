@@ -8,7 +8,7 @@ import {
   Line,
   LogoAtom,
   ParagraphAtom,
-} from "@/components/Atoms";
+} from "@/components";
 import React from "react";
 
 export const FooterLogoSection: React.FC = () => {
