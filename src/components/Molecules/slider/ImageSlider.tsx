@@ -7,7 +7,7 @@ import {
 export const ImageSlider: React.FC = () => {
   const mainbath = "/images/slider";
   const slidesImgs = [];
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 3; i++) {
     slidesImgs.push(`${mainbath}/swipper-${i}.png`);
   }
   return (
