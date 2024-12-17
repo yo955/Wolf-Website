@@ -17,14 +17,14 @@
   text-align: center;
 }
 
+@mixin section {
+  margin-block: $margin-section;
+}
+
 @mixin container {
   padding-inline: $padding-inline;
   width: calc(100% - $padding-inline);
   margin-inline: auto;
-}
-
-@mixin section {
-  margin-block: $margin-section;
 }
 
 @mixin radius {
@@ -73,6 +73,13 @@
   color: $para-color;
 }
 @mixin main-title {
+  @include for-tablet {
+    font-size: 1rem;
+    background-color: red;
+  }
+  @include for-lg-screen {
+    background-color: blue;
+  }
   font-weight: $font-medium;
   font-size: $title-font-size;
   line-height: $title-line-height;

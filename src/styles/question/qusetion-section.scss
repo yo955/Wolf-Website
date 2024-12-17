@@ -2,7 +2,7 @@
   @include section;
   .main-container {
     @include container;
-    @include flex(space-between, baseline, nowrap, 1rem, nowrap);
+    @include flex(space-between, baseline, nowrap, 1rem, wrap);
     flex: 1;
   }
 }

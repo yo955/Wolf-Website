@@ -21,12 +21,12 @@
     "offer": "It is Perfect For:"
   },
   {
-    "imageUrl": "/images/plan-premium.png",
+    "imageUrl": "/images/svg/price-cards/circle.svg",
     "title": "Mobile App",
     "description": "Perfect 👌",
     "paragraph": "For Your Business to enhances engagement and if you want to strengthening your brand loyalty.",
     "listItem": [],
     "buttonText": "",
-    "icon": "PhoneAndroidIcon "
+    "icon": "PhoneAndroidIcon"
   }
 ]
