@@ -32,7 +32,8 @@ export const PriceSection: React.FC = () => {
                 listItem={card.listItem}
                 buttonText={card.buttonText}
                 icon={iconMap[card.icon]}
-                buttonsArray={[]}
+                chat={card.chat}
+                offer={card.offer}
               />
             ))}
         </div>

@@ -36,7 +36,7 @@
 }
 
 @mixin black-btn {
-  width: calc(100% - 2rem);
+  width: calc(100% - 0.5rem);
   overflow: hidden;
   margin-block: 1rem;
   height: 48px;

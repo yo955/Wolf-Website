@@ -1,13 +1,13 @@
 [
   {
-   
     "title": "Flexible Pricing for Companies of All Sizes.",
     "description": "",
     "paragraph": "",
     "listItem": ["Web App", "Dashboard", "Mobile App", "Landing page"],
     "buttonText": "Book a Free 15-min call",
     "icon": "",
-    "chat": "Prefer E-mail? Let’s Chat"
+    "chat": "Prefer E-mail? Let’s Chat",
+    "offer": "We Offer : "
   },
   {
     "imageUrl": "/images/plan-standard.png",
@@ -17,7 +17,8 @@
     "listItem": ["E-commerce", "Services", "Events", "Lead generation"],
     "buttonText": "Get Yours Now!",
     "icon": "ImportantDevicesIcon",
-    "chat": "Prefer E-mail? Let’s Chat"
+    "chat": "Prefer E-mail? Let’s Chat",
+    "offer": "It is Perfect For:"
   },
   {
     "imageUrl": "/images/plan-premium.png",

@@ -26,7 +26,7 @@ export const RightQusteion = () => {
             <h1>How easy is it to set up  Epoque?</h1>
           </div>
           <div className="icon">
-            <p>-</p>
+            <h1>-</h1>
           </div>
         </HeadingAtom>
         <ParagraphAtom className="right-paragraph">
@@ -49,7 +49,9 @@ export const RightQusteion = () => {
             >
               <QusetionAtom qusetion={question.question} />
               <div className="icon">
-                <p>{openQuestionIndex === index ? "-" : "+"}</p>
+                <h1 className="plus-icons">
+                  {openQuestionIndex === index ? "-" : "+"}
+                </h1>
               </div>
             </div>
             {openQuestionIndex === index && answer && (

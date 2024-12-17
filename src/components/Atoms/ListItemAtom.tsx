@@ -5,5 +5,10 @@ interface ListItemProps {
 }
 
 export const ListItemAtom: React.FC<ListItemProps> = ({ text }) => {
-  return <li className="list-item">{text}</li>;
+  return (
+    <li className="list-item">
+      <span>•</span>
+      {text}
+    </li>
+  );
 };

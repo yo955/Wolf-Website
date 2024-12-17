@@ -1,6 +1,11 @@
 import React from "react";
 import { CardProps } from "@/assets/types/cardTypes";
-import { ButtonAtom, HeadingAtom, ImgAtom, ParagraphAtom } from "@/components/Atoms";
+import {
+  ButtonAtom,
+  HeadingAtom,
+  ImgAtom,
+  ParagraphAtom,
+} from "@/components/Atoms";
 import { List } from "./ListItem";
 
 export const CardItem: React.FC<CardProps> = ({
@@ -15,6 +20,7 @@ export const CardItem: React.FC<CardProps> = ({
   text,
   btnclass = "black-btn",
   buttonsArray,
+  offer = "",
 }) => {
   return (
     <div className="card">
@@ -51,7 +57,7 @@ export const CardItem: React.FC<CardProps> = ({
             <p>{paragraph}</p>
           </ParagraphAtom>
         )}
-        {listItem && <List items={listItem} />}
+        {listItem && <List title={offer} items={listItem} />}
 
         {buttonText && !buttonsArray && (
           <ButtonAtom className={btnclass}>{buttonText}</ButtonAtom>

@@ -20,6 +20,7 @@
   }
   max-width: 628px;
   .right-title {
+    width: 100%;
     @include flex(space-between, center, row, 0.2rem, nowrap);
   }
   .qa-item {
