@@ -1,6 +1,6 @@
 .price-section {
   @include section;
-  
+
   .price-container {
     @include container;
     @include text-center;
@@ -87,6 +87,13 @@
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
+          background-color: $bg-white-card;
+          border: 1px solid $border-white-card;
+          color: $text-black;
+
+          .card-top {
+            color: $text-black;
+          }
 
           .card-description {
             width: 302px;
@@ -137,28 +144,39 @@
         }
 
         &:nth-child(3) {
-          .card-top {
-            position: relative;
-            color: $text-white;
-            width: 100%;
-            height: 0;
+          @include flex(start, center, column, 4rem, nowrap);
 
-            @include flex(space-between, start, row, 0, nowrap);
+          padding-top: 20px;
+          padding-left: 20px;
 
-            .card-image {
-              width: 70px;
-            }
-          }
-        }
-
-        &:nth-child(1),
-        &:nth-child(3) {
           background-color: $bg-white-card;
           border: 1px solid $border-white-card;
           color: $text-black;
 
           .card-top {
-            color: $text-black;
+            position: relative;
+            color: $text-white;
+            width: 100%;
+            height: 0;
+            @include flex(space-between, start, row, 0, nowrap);
+            .card-image {
+              width: 70px;
+            }
+          }
+          .card-description {
+            .card-title {
+              h1 {
+                font-size: 20px;
+              }
+            }
+            .image {
+              background-image: url("/images/svg/price-cards/phone.svg");
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 321px;
+              height: 321px;
+            }
           }
         }
       }
