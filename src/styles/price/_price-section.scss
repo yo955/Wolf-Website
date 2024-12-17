@@ -170,6 +170,8 @@
               }
             }
             .image {
+              position: relative;
+              bottom: 0;
               background-image: url("/images/svg/price-cards/phone.svg");
               background-position: center center;
               background-size: contain;
