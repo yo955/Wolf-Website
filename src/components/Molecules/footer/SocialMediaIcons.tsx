@@ -1,10 +1,10 @@
 import { IconAtom } from "@/components/Atoms";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 export const SocialMediaIcons: React.FC = () => (
-  <div className="social-icons flex space-x-4">
+  <div className="social-icons">
+    <IconAtom icon={<FaWhatsapp />} link="https://twitter.com" />
+    <IconAtom icon={<FaLinkedin />} link="https://instagram.com" />
     <IconAtom icon={<FaFacebook />} link="https://facebook.com" />
-    <IconAtom icon={<FaTwitter />} link="https://twitter.com" />
-    <IconAtom icon={<FaInstagram />} link="https://instagram.com" />
   </div>
 );

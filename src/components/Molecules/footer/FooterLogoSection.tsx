@@ -1,11 +1,58 @@
-import { LogoAtom } from "@/components/Atoms";
+"use client";
+import { useState } from "react";
+import { FaRegCircle } from "react-icons/fa6";
+import {
+  ButtonAtom,
+  HeadingAtom,
+  ImgAtom,
+  Line,
+  LogoAtom,
+  ParagraphAtom,
+} from "@/components/Atoms";
 import React from "react";
 
-export const FooterLogoSection: React.FC = () => (
-  <div className="footer-logo-section flex flex-col items-start">
-    <LogoAtom src="/images/logo.png" alt="Logo" />
-    {/* <HeadingAtom text="تواصل معنا" className="mt-4 text-lg font-bold" />
-    <ButtonAtom text="اتصل بنا" />
-    <ParagraphAtom text="نحن هنا للمساعدة في أي وقت." className="mt-2 text-sm text-gray-500" /> */}
-  </div>
-);
+export const FooterLogoSection: React.FC = () => {
+  const [isopen, setIsOpen] = useState<boolean>(true);
+  const toggleAvailable = () => {
+    setIsOpen(!isopen);
+  };
+  return (
+    <div className="footer-logo-section">
+      <div className="logo">
+        <LogoAtom
+          className="footer-logo"
+          src="/images/svg/footer/wolf-logo.svg"
+          alt="Logo"
+        />
+      </div>
+      <Line className="line-logo" />
+      <HeadingAtom className="footer-title">
+        <p>
+          We are here to create the best software product for your business So,
+          feel free to contact us
+        </p>
+      </HeadingAtom>
+      <ButtonAtom className="footer-btn">
+        <ImgAtom
+          className="footer-avatar"
+          src="/images/svg/qusetion-card/Avatar.svg"
+          alt="avatar-logo"
+          width={32}
+          height={32}
+        />
+        <ParagraphAtom className="avatar-text">
+          <p>Free 15-min call</p>
+        </ParagraphAtom>
+      </ButtonAtom>
+      <ParagraphAtom className="available">
+        <p>
+          <FaRegCircle
+            className={`circle ${isopen ? "open" : ""}`}
+            onClick={toggleAvailable}
+          />
+        </p>
+        <p>Available now!</p>
+      </ParagraphAtom>
+    </div>
+  );
+};

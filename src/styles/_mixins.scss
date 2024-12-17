@@ -31,8 +31,8 @@
   border-radius: $main-radius;
 }
 
-@mixin mix-color($direction, $from, $to) {
-  background: linear-gradient($direction, $from, $to);
+@mixin mix-color($direction, $first, $second, $third) {
+  background: linear-gradient($direction, $first, $second, $third);
 }
 
 @mixin black-btn {

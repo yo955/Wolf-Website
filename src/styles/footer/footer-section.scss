@@ -1,0 +1,48 @@
+.footer-section {
+  background-color: $bg-footer;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  height: 413px;
+  margin: 2.5rem;
+  @include radius;
+  .footer-container {
+    @include flex(space-between, center, column, 0, nowrap);
+    position: absolute;
+    padding: 24px;
+    left: 0;
+    top: 0;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    background-image: url("/images/svg/footer/section.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin: 10px;
+    @include radius;
+    .footer-logo-section {
+      text-align: center;
+    }
+    .top-section {
+      @include flex(center, start, row, 32px, nowrap);
+    }
+    .bottom-section {
+      width: 100%;
+      @include flex(space-between, center, row, 0, nowrap);
+    }
+  }
+  .line-bottom {
+    width: 100%;
+    border: 0.5px solid darken($color: $footer-color, $amount: 45);
+    margin-block: 1.5rem;
+  }
+  h1,
+  p,
+  .social-icons {
+    color: $footer-color;
+  }
+  .para-icons {
+    @include flex(center, center, row, 1.5rem, nowrap);
+  }
+}

@@ -1,0 +1,3 @@
+.social-icons{
+    @include flex(space-between, center, row, 1rem, nowrap);
+}

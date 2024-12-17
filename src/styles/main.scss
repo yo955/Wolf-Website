@@ -5,11 +5,15 @@
 @import "./fonts";
 @import "./mediaquery";
 @import "./normalize";
-// slider styles
+
+// slider 
 @import "./slider/index.scss";
 
 // price
 @import "./price/index.scss";
 
 // question
-@import "./question/index.scss"
+@import "./question/index.scss";
+
+// footer
+@import "./footer/index.scss";

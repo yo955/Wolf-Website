@@ -1,3 +1,6 @@
-export const Line: React.FC = () => (
-  <hr className="my-4 border-t border-gray-300" />
+interface LineProps {
+  className: string;
+}
+export const Line: React.FC<LineProps> = ({ className }) => (
+  <hr className={className} />
 );
