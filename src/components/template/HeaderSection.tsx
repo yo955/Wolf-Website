@@ -1,6 +1,5 @@
 import React from "react";
-import { Navbar } from "../Organisms/Navbar";
-// import Avatar from "../Atoms/Avatar";
+import { Navbar } from "@/components";
 function HeaderSection() {
   return (
     <div className="headerSection">

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
-import {Icon,Description,Text} from '@/components/Atoms/slider';
+import {Icon,Description,Text} from '@/components';
 
 
 interface ServiceCardProps {

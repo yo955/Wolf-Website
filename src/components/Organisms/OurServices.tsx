@@ -2,7 +2,7 @@ import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
 import Container from "@mui/material/Container";
-import { Text } from "../Atoms/slider/Text";
+import { Text } from "@/components";
 import Box from "@mui/material/Box";
 export function OurServices() {
   const arr = [
@@ -225,7 +225,7 @@ export function OurServices() {
         }}
       >
         {arr.map((e) => (
-          <div key={e.id} style={{ mb: 20 }}>
+          <div key={e.id} style={{ marginBottom: 20 }}>
             <Card
               sx={{
                 height: "256px",

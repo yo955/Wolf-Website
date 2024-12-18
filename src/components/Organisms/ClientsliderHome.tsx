@@ -20,7 +20,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Container from "@mui/material/Container";
 import Image from "next/image";
 import cardData from "../../data/cardData";
-import { Text } from "@/components/Atoms/slider/Text";
+import { Text } from "@/components";
 
 
 

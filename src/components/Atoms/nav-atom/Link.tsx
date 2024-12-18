@@ -5,12 +5,10 @@ interface LinkProps {
   children: React.ReactNode;
 }
 
-const Link: React.FC<LinkProps> = ({ href, children }) => {
+export const Link: React.FC<LinkProps> = ({ href, children }) => {
   return (
     <a href={href}>
       <Typography component="span">{children}</Typography>
     </a>
   );
 };
-
-export default Link;

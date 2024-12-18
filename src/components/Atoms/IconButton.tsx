@@ -7,7 +7,7 @@ interface IconButtonProps {
   sx?: object;
 }
 
-const IconButton: React.FC<IconButtonProps> = ({ onClick, children, sx }) => {
+export const IconButton: React.FC<IconButtonProps> = ({ onClick, children, sx }) => {
   return (
     <MuiIconButton onClick={onClick} sx={sx}>
       {children}

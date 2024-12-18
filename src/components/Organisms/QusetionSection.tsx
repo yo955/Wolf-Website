@@ -1,4 +1,4 @@
-import { LeftQusteion, RightQusteion } from "../Molecules";
+import { LeftQusteion, RightQusteion } from "@/components";
 
 export const QusetionSection = () => {
   return (

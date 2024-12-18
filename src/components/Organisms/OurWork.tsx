@@ -1,6 +1,6 @@
 // src/components/Organisms/OurWork.tsx
 import React from 'react';
-import {TextWithImages} from '../Molecules/TextWithImages';
+import {TextWithImages} from '@/components';
 
 export const OurWork: React.FC = () => {
   return (
