@@ -1,4 +1,3 @@
-// import { ContainerImg } from "../Atoms/ContainerImg";
 import {
   FooterSection,
   PriceSection,
@@ -6,7 +5,7 @@ import {
   OurServices, SwipperSection,
   ClientsliderHome, OurWork 
 } from "@/components";
-// import Navbar from "../Organisms/Navbar";
+
 import HeaderSection from "./HeaderSection";
 export const MainTempleate = () => {
   return (

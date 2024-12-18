@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface ImageProps {
@@ -8,7 +9,7 @@ interface ImageProps {
   height: number;
 }
 
-export const Image: React.FC<ImageProps> = ({ src, alt, className, width, height }) => {
+export const ImageAtom: React.FC<ImageProps> = ({ src, alt, className, width, height }) => {
   return <Image src={src} alt={alt} className={className} width={width} height={height} />;
 };
 
