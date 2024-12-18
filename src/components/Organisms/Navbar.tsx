@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 import Link from "../Atoms/nav-atom/Link";
-import {Button} from "../Atoms/nav-atom";
-import {IconButton} from "../Atoms/nav-atom/IconButton";
+import { Button } from "../Atoms/nav-atom";
+import { IconButton } from "../Atoms/nav-atom/IconButton";
 import { DrawerMenu } from "../Molecules/nav-molecules/DrawerMenu";
 import { CiMenuFries } from "react-icons/ci";
 import useMediaQuery from "@mui/material/useMediaQuery";
+
 export const Navbar: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
   const isDesktop = useMediaQuery("(min-width:600px)");
@@ -18,8 +19,15 @@ export const Navbar: React.FC = () => {
     setState({ bottom: open });
   };
 
-   const handleClick = () => {
+  const handleClick = () => {
     window.location.href = "tel:+01550227582";
+  };
+
+  const handleSmoothScroll = (id: string) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -30,10 +38,30 @@ export const Navbar: React.FC = () => {
         </Link>
         {isDesktop && (
           <>
-            <Link href="#services">Services</Link>
-            <Link href="#work">Work</Link>
-            <Link href="#pricing">Pricing</Link>
-            <Link href="#faqs">FAQs</Link>
+            <span
+              className="link-nav"
+              onClick={() => handleSmoothScroll("#services")}
+            >
+              Services
+            </span>
+            <span
+              className="link-nav"
+              onClick={() => handleSmoothScroll("#work")}
+            >
+              Work
+            </span>
+            <span
+              className="link-nav"
+              onClick={() => handleSmoothScroll("#pricing")}
+            >
+              Pricing
+            </span>
+            <span
+              className="link-nav"
+              onClick={() => handleSmoothScroll("#faqs")}
+            >
+              FAQs
+            </span>
           </>
         )}
         <Button onClick={handleClick} className="custom-button" id="ptn">
@@ -54,5 +82,3 @@ export const Navbar: React.FC = () => {
     </div>
   );
 };
-
- 
