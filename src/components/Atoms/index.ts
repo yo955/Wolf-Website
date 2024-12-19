@@ -6,7 +6,7 @@ export { AnswerAtom } from "./Answer";
 export { ButtonAtom } from "./ButtonAtom";
 export { IconAtom } from "./IconAtom";
 export { IconButton } from "./IconButton";
-export { Image } from "./Image";
+export { ImageAtom } from "./ImageAtom";
 export { ImgAtom } from "./ImgAtom";
 export { Line } from "./Line";
 export { LinkAtom } from "./LinkAtom";
