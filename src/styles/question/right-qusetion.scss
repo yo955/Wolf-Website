@@ -1,22 +1,44 @@
 .right-section {
   .main-content {
     max-height: 155px;
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    @media (min-width: 300px) {
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 992px) {
+      margin-bottom: 2rem;
+    }
+    
     @include flex(start, start, column, 1rem, nowrap);
   }
+
   h1 {
     font-weight: $font-bold;
-    font-size: 20px;
-    line-height: 28px;
     color: $dark-color;
+    @media (min-width: 300px) {
+      font-size: 1rem;
+      line-height: 22px;
+    }
+    @media (min-width: 992px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
   p {
     font-weight: $font-regular;
-    font-size: 18px;
-    line-height: 25px;
+    @media (min-width: 300px) {
+      font-size: 0.9rem;
+      line-height: 18px;
+    }
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
     color: $para-color;
     padding-right: 2rem;
     text-wrap: wrap;
+    text-align: left;
   }
   max-width: 628px;
   .right-title {
@@ -25,7 +47,13 @@
   }
   .qa-item {
     @include flex(center, "", column, "", nowrap);
-    height: 5.62rem;
+    @media (min-width: 300px) {
+      min-height: 4rem;
+    }
+    @media (min-width: 992px) {
+      min-height: 5.62rem;
+    }
+
     border-bottom: 1px solid $dark-color;
   }
 

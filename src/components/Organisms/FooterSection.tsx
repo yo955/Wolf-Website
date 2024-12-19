@@ -1,4 +1,9 @@
-import { Line, ParagraphAtom ,FooterLogoSection, SocialMediaIcons } from "@/components";
+import {
+  Line,
+  ParagraphAtom,
+  FooterLogoSection,
+  SocialMediaIcons,
+} from "@/components";
 
 export const FooterSection: React.FC = () => (
   <footer className="footer-section">
@@ -8,12 +13,16 @@ export const FooterSection: React.FC = () => (
       </div>
       <Line className="line-bottom" />
       <div className=" bottom-section">
-        <ParagraphAtom className="para-icons">
-          <p> © 2024 Copyright Wolf. All rights reserved.</p>
-          <p>Privacy Policy</p>
-          <p>Terms of Use</p>
-        </ParagraphAtom>
-        <SocialMediaIcons />
+        <div className="bottom-container">
+          <ParagraphAtom className="para-icons">
+            <p> © 2024 Copyright Wolf. All rights reserved.</p>
+            <div className="two-para">
+              <p>Privacy Policy</p>
+              <p>Terms of Use</p>
+            </div>
+          </ParagraphAtom>
+          <SocialMediaIcons />
+        </div>
       </div>
     </div>
   </footer>

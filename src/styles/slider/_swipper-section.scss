@@ -9,14 +9,17 @@
 }
 
 .description {
-  h1,
-  p {
-    font-size: 24px;
-  }
-  @include for-desktop {
+  @media (min-width: 300px) {
+    width: 100%;
     h1,
     p {
       font-size: 1rem;
+    }
+  }
+  @media (min-width: 996px) {
+    h1,
+    p {
+      font-size: 24px;
     }
   }
   .swipper-title {
@@ -25,13 +28,12 @@
     }
   }
   .black-btn {
-    @include for-desktop {
-      min-width: 100%;
-    }
-    max-width: fit-content;
     font-size: 1rem;
     line-height: 24px;
     font-weight: $font-medium;
+    @media (min-width:992px) {
+      max-width: fit-content;
+    }
   }
 
   .swipper-paragraph {

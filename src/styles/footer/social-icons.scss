@@ -1,8 +1,8 @@
 .social-icons {
     @include flex(space-between, center, row, 1rem, nowrap);
   
-    @include for-phone {
-      @include flex(center, center, row, 0.5rem, wrap);
+    @media (min-width:300px) {
+      @include flex(center, center, row, 1rem, nowrap);
     }
   }
   

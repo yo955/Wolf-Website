@@ -10,7 +10,7 @@ export const ButtonAtom: React.FC<ButtonAtomprops> = ({
   className,
 }) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button className={`${className} cursor-pointer`} onClick={onClick}>
       {children}
     </button>
   );

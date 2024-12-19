@@ -2,8 +2,14 @@
   background-color: $bg-footer;
   padding: 32px;
   position: relative;
-  overflow: hidden;
-  height: 413px;
+  @media (min-width: 300px) {
+    height: 500px;
+  }
+  @media (min-width: 992px) {
+    overflow: hidden;
+    height: 413px;
+  }
+
   margin: 2.5rem;
   @include radius;
 
@@ -29,37 +35,29 @@
     margin: 10px;
     @include radius;
 
-    @include for-phone {
-      flex-direction: column;
-      padding: 16px;
-      width: 100%;
-    }
-
     .footer-logo-section {
       text-align: center;
-
-      @include for-phone {
-        margin-bottom: 1rem;
-      }
     }
 
     .top-section {
       @include flex(center, start, row, 32px, nowrap);
-
-      @include for-phone {
-        flex-direction: column;
-        align-items: center;
-      }
     }
 
     .bottom-section {
       width: 100%;
-      @include flex(space-between, center, row, 0, nowrap);
-
-      @include for-phone {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
+      .bottom-container {
+        @media (min-width: 300px) {
+          text-align: center;
+          @include flex(center, center, column, 1rem, wrap);
+        }
+        @media (min-width: 992px) {
+          @include flex(center, center, row, 1rem, nowrap);
+        }
+      }
+    }
+    .two-para {
+      @media (min-width: 300px) {
+        @include flex(center, center, row, 2rem, wrap);
       }
     }
   }
@@ -68,28 +66,20 @@
     width: 100%;
     border: 0.5px solid darken($color: $footer-color, $amount: 45);
     margin-block: 1.5rem;
-
-    @include for-phone {
-      margin-block: 1rem;
-    }
   }
 
   h1,
   p,
   .social-icons {
     color: $footer-color;
-
-    @include for-phone {
-      font-size: 1rem;
-    }
   }
 
   .para-icons {
-    @include flex(center, center, row, 1.5rem, nowrap);
-
-    @include for-phone {
-      flex-direction: column;
-      align-items: center;
+    @media (min-width: 300px) {
+      @include flex(center, center, column, 0.7rem, nowrap);
+    }
+    @media (min-width: 992px) {
+      @include flex(center, center, row, 1.5rem, nowrap);
     }
   }
 }

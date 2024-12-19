@@ -27,6 +27,7 @@
     box-sizing: border-box;
     @include flex(center, center, row, 0.2rem, wrap);
     z-index: -1;
+    margin: auto;
 
     .card-background {
       position: absolute;
@@ -38,7 +39,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      z-index: 1;
+      z-index: 10;
       margin: 10px;
       @include radius;
     }
