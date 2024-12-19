@@ -13,12 +13,6 @@
   margin: 2.5rem;
   @include radius;
 
-  @include for-phone {
-    height: auto;
-    margin: 1.5rem;
-    padding: 20px;
-  }
-
   .footer-container {
     @include flex(space-between, center, column, 0, nowrap);
     position: absolute;
@@ -51,7 +45,7 @@
           @include flex(center, center, column, 1rem, wrap);
         }
         @media (min-width: 992px) {
-          @include flex(center, center, row, 1rem, nowrap);
+          @include flex(space-between, center, row, 1rem, nowrap);
         }
       }
     }

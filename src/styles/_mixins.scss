@@ -79,9 +79,6 @@
   @include flex(center, center, row, 0.5rem, nowrap);
 }
 @mixin main-parargraph {
-  @include for-desktop {
-    font-size: 1rem;
-  }
   font-weight: $font-regular;
   font-size: $para-font-size;
   line-height: $para-line-height;

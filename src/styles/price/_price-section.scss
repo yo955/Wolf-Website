@@ -23,14 +23,9 @@
       padding: 1rem;
       @include radius;
       display: flex;
-      @media (min-width: 300px) {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      @media (min-width: 992px) {
-        flex-direction: row;
-        gap: 1rem;
-      }
+      gap: 1rem;
+      flex-wrap: wrap;
+
       .card {
         @include flex(left, space-between, row, 0, wrap);
         flex: 1;
@@ -39,18 +34,21 @@
         text-align: left;
         position: relative;
         overflow: hidden;
+
+        @media (min-width: 992px) {
+          height: 491px;
+        }
+
         @media (min-width: 300px) {
           height: auto;
           h1 {
             font-size: 20px;
           }
-          p{
+          p {
             font-size: 1rem;
           }
         }
-        @media (min-width: 992px) {
-          height: 491px;
-        }
+
         .chat-link {
           text-align: center;
         }
@@ -132,10 +130,8 @@
 
         &:nth-child(3) {
           @include flex(start, center, column, 4rem, nowrap);
-
           padding-top: 20px;
           padding-left: 20px;
-
           background-color: $bg-white-card;
           border: 1px solid $border-white-card;
           color: $text-black;
@@ -149,34 +145,56 @@
               width: 70px;
             }
           }
+
           .card-description {
             .card-title {
               h1 {
                 font-size: 20px;
               }
             }
-            .image {
-              @media (min-width: 300px) {
-                position: relative;
-                bottom: -80px;
-                left: 50px;
-                min-height: fit-content;
-              }
-              @media (min-width: 992px) {
-                position: absolute;
-                bottom: -80px;
-                left: -10px;
-              }
-              position: absolute;
 
+            .image {
+              position: absolute;
               background-image: url("/images/svg/price-cards/phone.svg");
               background-position: center center;
               background-size: contain;
               background-repeat: no-repeat;
               width: 321px;
               height: 321px;
+
+              @media (min-width: 300px) {
+                position: relative;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                min-height: fit-content;
+              }
+
+              @media (min-width: 992px) {
+                position: absolute;
+                bottom: -100px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
             }
           }
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        .card:nth-child(1) {
+          flex: 0 0 100%;
+        }
+
+        .card:nth-child(2),
+        .card:nth-child(3) {
+          flex: 1;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .card {
+          flex: 0 0 100%;
         }
       }
     }

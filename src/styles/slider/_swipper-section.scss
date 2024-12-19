@@ -5,40 +5,58 @@
 
   .description {
     margin-block: 15px;
-  }
-}
 
-.description {
-  @media (min-width: 300px) {
-    width: 100%;
-    h1,
-    p {
+    // Mobile: Ensure full width and proper font sizes
+    @media (min-width: 300px) {
+      width: 100%;
+
+      h1,
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    // Tablet and larger: Adjust font sizes for better readability
+    @media (min-width: 768px) {
+      width: 80%; // Optional: Slightly narrower description for tablet screens
+
+      h1,
+      p {
+        font-size: 1.25rem; // Adjust font size for better readability on tablets
+      }
+    }
+
+    // Desktop: Increase font size for larger screens
+    @media (min-width: 996px) {
+      width: 60%; // Optional: More compact width for larger screens
+
+      h1,
+      p {
+        font-size: 24px;
+      }
+    }
+
+    .swipper-title {
+      h1 {
+        font-weight: $font-regular !important;
+      }
+    }
+
+    .black-btn {
       font-size: 1rem;
-    }
-  }
-  @media (min-width: 996px) {
-    h1,
-    p {
-      font-size: 24px;
-    }
-  }
-  .swipper-title {
-    h1 {
-      font-weight: $font-regular !important;
-    }
-  }
-  .black-btn {
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: $font-medium;
-    @media (min-width:992px) {
-      max-width: fit-content;
-    }
-  }
+      line-height: 24px;
+      font-weight: $font-medium;
 
-  .swipper-paragraph {
-    span {
-      font-weight: $font-bold;
+      // Desktop: Restrict button width
+      @media (min-width: 992px) {
+        max-width: fit-content;
+      }
+    }
+
+    .swipper-paragraph {
+      span {
+        font-weight: $font-bold;
+      }
     }
   }
 }
