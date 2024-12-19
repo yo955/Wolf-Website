@@ -1,34 +1,70 @@
-import {
-  SlideContent,
-  SwipperContainer,
-  SwipperSlide,
-} from "@/components";
+"use client";
 
-export const ImageSlider: React.FC = () => {
-  const mainbath = "/images/slider";
-  const slidesImgs = [];
-  for (let i = 1; i <= 5; i++) {
-    const imagePath = `${mainbath}/swipper-${i}.png`;
-    if (imagePath) slidesImgs.push(imagePath);
-  }
+import React from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import required components
+import Card from "@mui/joy/Card";
+import CardContent from "@mui/joy/CardContent";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+// Import required modules
+import { Autoplay, Pagination } from "swiper/modules";
+import Container from "@mui/material/Container";
+import Image from "next/image";
+import PhoneData from "../../../data/PhoneData";
+
+export function ImageSlider() {
   return (
-    <SwipperContainer slidesPerView={5} spaceBetween={50} autoplay={true}>
-      <SwipperSlide>
-        <div className="slide-content flex gap-10">
-          {slidesImgs.length > 0 ? (
-            slidesImgs.map((img, index) => (
-              <SlideContent
-                key={index}
-                imageUrl={img}
-                alt="sliderImg"
-              ></SlideContent>
-            ))
-          ) : (
-            <div>No images available</div>
-          )}
-        </div>
-      </SwipperSlide>
-    </SwipperContainer>
+    <Container sx={{ mt: 10, mb: 20 }} className="">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+        }}
+        modules={[Pagination, Autoplay]}
+        autoplay={{
+          delay: 100,
+          disableOnInteraction: false,
+        }}
+        speed={2000}
+        loop={true}
+        className=""
+      >
+        {PhoneData.map((e, index) => (
+          <SwiperSlide key={index}>
+            <Card sx={{border:"none"}}>
+              <CardContent>
+                <Image
+                  src={e.photo}
+                  alt="image"
+                  width={302}
+                  height={346}
+                  style={{
+                    borderRadius: "18.52px",
+                  }}
+                />
+              </CardContent>
+            </Card>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </Container>
   );
-};
+}
