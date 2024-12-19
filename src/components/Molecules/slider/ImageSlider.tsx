@@ -20,7 +20,7 @@ import PhoneData from "../../../data/PhoneData";
 
 export function ImageSlider() {
   return (
-    <Container sx={{ mt: 10, mb: 20 }} className="">
+    <Container sx={{ mt: 10, mb: 3 }} className="">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
