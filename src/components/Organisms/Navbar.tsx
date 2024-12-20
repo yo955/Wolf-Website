@@ -5,7 +5,8 @@ import {
   Link,
   Button,
   IconButton,
-  DrawerMenu
+  DrawerMenu,
+  ImgAtom,
 }  from '@/components';
 import { CiMenuFries } from "react-icons/ci";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -36,7 +37,13 @@ export const Navbar: React.FC = () => {
     <div className="NAVBAR">
       <div className="navbar-content">
         <Link href="/">
-          <img src="/images/Nav/logo.png" alt="Logo" className="logo" />
+        <ImgAtom
+            src={"/images/Nav/logo.png"}
+            alt={"Logo"}
+            className={"logo"}
+            height={70}
+            width={70}
+          />
         </Link>
         {isDesktop && (
           <>
@@ -68,7 +75,7 @@ export const Navbar: React.FC = () => {
           </>
         )}
         <Button onClick={handleClick} className="custom-button" id="ptn">
-          We're here
+          We are here
         </Button>
         <IconButton
           sx={{
