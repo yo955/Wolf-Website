@@ -13,6 +13,9 @@
     text-transform: capitalize;
     width: 411px;
     height: 56px;
+    @media (min-width:300px) and (max-width:767px) {
+      margin-block: 1rem;
+    }
   }
 
   .footer-btn {

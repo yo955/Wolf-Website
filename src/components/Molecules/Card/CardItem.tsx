@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { CardProps } from "@/assets/types/cardTypes";
 import { ButtonAtom, HeadingAtom, ImgAtom, ParagraphAtom } from "@/components";
@@ -61,7 +61,9 @@ export const CardItem: React.FC<CardProps> = ({
         {listItem && <List title={offer} items={listItem} />}
 
         {buttonText && !buttonsArray && (
-          <ButtonAtom className={btnclass}>{buttonText}</ButtonAtom>
+          <ButtonAtom className={btnclass}>
+            <span>{buttonText}</span>
+          </ButtonAtom>
         )}
 
         {buttonsArray && buttonsArray.length > 0 && (

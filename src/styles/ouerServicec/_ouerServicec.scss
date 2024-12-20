@@ -2,12 +2,16 @@ $mobile: 600px;
 $tablet: 768px;
 $desktop: 1024px;
 @import '../_variables.scss';
+#services{
+@include section
+}
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     margin: 30px 0;
+    @include container
 }
 
 // .card {

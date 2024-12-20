@@ -34,13 +34,23 @@
         text-align: left;
         position: relative;
         overflow: hidden;
-
+        .black-btn {
+          width: 100%;
+          span{
+            @media (min-width:300px) and (max-width:580px) {
+              
+              font-size: 12px;
+            }
+          }
+        }
         @media (min-width: 992px) {
           height: 491px;
         }
 
-        @media (min-width: 300px) {
+        @media (min-width: 300px) and (max-width:767px) {
           height: auto;
+          width: 100%;
+         
           h1 {
             font-size: 20px;
           }
@@ -82,6 +92,7 @@
           background-color: $bg-white-card;
           border: 1px solid $border-white-card;
           color: $text-black;
+         
 
           .card-top {
             color: $text-black;
@@ -89,6 +100,7 @@
 
           .card-description {
             width: 302px;
+           
 
             h1 {
               font-size: 18px;
@@ -135,8 +147,10 @@
           background-color: $bg-white-card;
           border: 1px solid $border-white-card;
           color: $text-black;
+          // position: relative;
 
           .card-top {
+            
             color: $text-white;
             width: 100%;
             height: 0;
@@ -147,6 +161,7 @@
           }
 
           .card-description {
+            // position: absolute;
             .card-title {
               h1 {
                 font-size: 20px;
@@ -162,7 +177,7 @@
               width: 321px;
               height: 321px;
 
-              @media (min-width: 300px) {
+              @media (min-width: 300px) and (max-width:767px) {
                 position: relative;
                 bottom: -25px;
                 left: 50%;
@@ -199,4 +214,5 @@
       }
     }
   }
+  
 }

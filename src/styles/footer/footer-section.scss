@@ -1,102 +1,94 @@
 .footer-section {
-    background-color: $bg-footer;
-    padding: 32px;
-    position: relative;
-    @media (min-width: 300px) {
-        height: 500px;
+  background-color: $bg-footer;
+  @media (min-width:300px) and (max-width:767px) {
+    background-color: transparent;
+  }
+  padding: 32px;
+  position: relative;
+  @media (min-width: 300px) {
+    height: 500px;
+  }
+  @media (min-width: 992px) {
+    overflow: hidden;
+    height: 413px;
+  }
+  margin: 2.5rem;
+  @include radius;
+  .footer-container {
+    @include flex(space-between, center, column, 0, nowrap);
+    position: absolute;
+    padding: 24px;
+    left: 0;
+    top: 0;
+    @media (min-width: 300px) and (max-width: 767px) {
+      padding: 10px;
+      width: calc(100% );
+      height: calc(100% );
     }
-    @media (min-width: 992px) {
-        overflow: hidden;
-        height: 413px;
-    }
-    margin: 2.5rem;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    background-image: url("/images/svg/footer/section.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin: 10px;
     @include radius;
-    .footer-container {
-        @include flex(space-between, center, column, 0, nowrap);
-        position: absolute;
-        padding: 24px;
-        left: 0;
-        top: 0;
-        width: calc(100% - 24px);
-        height: calc(100% - 24px);
-        background-image: url("/images/svg/footer/section.png");
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        z-index: 1;
-        margin: 10px;
-        @include radius;
-        .footer-logo-section {
-            text-align: center;
-        }
-        .top-section {
-            @include flex(center,
-            start,
-            row,
-            32px,
-            nowrap);
-        }
-        .bottom-section {
-            width: 100%;
-            .bottom-container {
-                @media (min-width: 300px) {
-                    text-align: center;
-                    @include flex(center,
-                    center,
-                    column,
-                    1rem,
-                    wrap);
-                }
-                @media (min-width: 992px) {
-                    @include flex(space-between,
-                    center,
-                    row,
-                    1rem,
-                    nowrap);
-                }
-            }
-        }
-        .two-para {
-            @media (min-width: 300px) {
-                @include flex(center, center, row, 2rem, wrap);
-            }
-        }
+    .footer-logo-section {
+      text-align: center;
     }
-    .line-bottom {
-        width: 100%;
-        border: 0.5px solid darken($color: $footer-color, $amount: 45);
-        margin-block: 1.5rem;
+    .top-section {
+      @include flex(center, start, row, 32px, nowrap);
     }
-    h1,
-    p,
-    .social-icons {
-        color: $footer-color;
-    }
-    .para-icons {
+    .bottom-section {
+      width: 100%;
+      .bottom-container {
         @media (min-width: 300px) {
-            @include flex(center, center, column, 0.7rem, nowrap);
+          text-align: center;
+          @include flex(center, center, column, 1rem, wrap);
         }
         @media (min-width: 992px) {
-            @include flex(center,
-            center,
-            row,
-            1.5rem,
-            nowrap);
+          @include flex(space-between, center, row, 1rem, nowrap);
         }
+      }
     }
+    .two-para {
+      @media (min-width: 300px) {
+        @include flex(center, center, row, 2rem, wrap);
+      }
+    }
+  }
+  .line-bottom {
+    width: 100%;
+    border: 0.5px solid darken($color: $footer-color, $amount: 45);
+    margin-block: 1.5rem;
+  }
+  h1,
+  p,
+  .social-icons {
+    color: $footer-color;
+  }
+  .para-icons {
+    @media (min-width: 300px) {
+      @include flex(center, center, column, 0.7rem, nowrap);
+    }
+    @media (min-width: 992px) {
+      @include flex(center, center, row, 1.5rem, nowrap);
+    }
+  }
 }
 
 @media (min-width: 300px) {
-    .foter-text {
-        width: 300px;
-        height: 63px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 25px;
-        text-align: center;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        position: absolute;
-        left: 0;
-    }
+  .foter-text {
+    width: 300px;
+    height: 63px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: absolute;
+    left: 0;
+  }
 }
