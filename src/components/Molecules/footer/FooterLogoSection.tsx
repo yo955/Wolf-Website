@@ -6,6 +6,7 @@ import {
   HeadingAtom,
   ImgAtom,
   Line,
+  LinkAtom,
   LogoAtom,
   ParagraphAtom,
 } from "@/components";
@@ -32,18 +33,22 @@ export const FooterLogoSection: React.FC = () => {
           feel free to contact us
         </p>
       </HeadingAtom>
-      <ButtonAtom className="footer-btn">
-        <ImgAtom
-          className="footer-avatar"
-          src="/images/svg/qusetion-card/Avatar.svg"
-          alt="avatar-logo"
-          width={32}
-          height={32}
-        />
-        <ParagraphAtom className="avatar-text">
-          <p>Free 15-min call</p>
-        </ParagraphAtom>
-      </ButtonAtom>
+      <LinkAtom link="https://wa.me/+201550227582">
+        <ButtonAtom className="footer-btn">
+          <ImgAtom
+            className="footer-avatar"
+            src="/images/svg/qusetion-card/Avatar.svg"
+            alt="avatar-logo"
+            width={32}
+            height={32}
+          />
+
+          <ParagraphAtom className="avatar-text">
+            <p>Free 15-min call</p>
+          </ParagraphAtom>
+        </ButtonAtom>
+      </LinkAtom>
+
       <ParagraphAtom className="available">
         <p>
           <FaRegCircle
