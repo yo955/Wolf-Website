@@ -42,8 +42,10 @@
     }
     .top-section {
       @include flex(center, start, row, 32px, nowrap);
+      overflow: hidden;
     }
     .bottom-section {
+      overflow: hidden;
       width: 100%;
       .bottom-container {
         @media (min-width: 300px) {
