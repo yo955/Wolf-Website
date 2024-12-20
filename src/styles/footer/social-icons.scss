@@ -1,5 +1,6 @@
 .social-icons {
     @include flex(space-between, center, row, 1rem, nowrap);
+    margin-block: 12px;
   
     @media (min-width:300px) {
       @include flex(center, center, row, 1rem, nowrap);

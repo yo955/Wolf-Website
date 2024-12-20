@@ -1,4 +1,8 @@
 .right-section {
+  .icon {
+    min-width: 10%;
+    text-align: center;
+  }
   .main-content {
     max-height: 155px;
     margin-top: 0.5rem;
@@ -8,7 +12,7 @@
     @media (min-width: 992px) {
       margin-bottom: 4.5rem;
     }
-    
+
     @include flex(start, start, column, 1rem, nowrap);
   }
 

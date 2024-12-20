@@ -63,11 +63,7 @@
         top: 1px;
         bottom: 1px;
       }
-      @media (min-width:300px) and (max-width(767px)) {
-        img{
-            width: 20;
-        }
-      }
+      
       padding: 33px 24px;
       color: $text-black;
       z-index: 20;
@@ -95,7 +91,13 @@
         z-index: -5;
         .card-top {
           width: 248px;
+          
           @include flex(space-between, center, row, 0.5rem, nowrap);
+          @media (min-width:300px) and (max-width(767px)) {
+            img{
+                max-width: 20%;
+            }
+          }
         }
       }
     }

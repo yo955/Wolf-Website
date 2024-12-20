@@ -36,8 +36,8 @@ export const CardItem: React.FC<CardProps> = ({
           <ImgAtom
             src={imageUrl || ""}
             alt={title || ""}
-            width={100}
-            height={100}
+            width={70}
+            height={70}
             className="card-image"
           />
         )}
