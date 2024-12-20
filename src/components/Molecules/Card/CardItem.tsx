@@ -1,7 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { CardProps } from "@/assets/types/cardTypes";
-import { ButtonAtom, HeadingAtom, ImgAtom, ParagraphAtom } from "@/components";
+import {
+  ButtonAtom,
+  HeadingAtom,
+  ImgAtom,
+  LinkAtom,
+  ParagraphAtom,
+} from "@/components";
 import { List } from "./ListItem";
 
 export const CardItem: React.FC<CardProps> = ({
@@ -61,9 +67,11 @@ export const CardItem: React.FC<CardProps> = ({
         {listItem && <List title={offer} items={listItem} />}
 
         {buttonText && !buttonsArray && (
-          <ButtonAtom className={btnclass}>
-            <span>{buttonText}</span>
-          </ButtonAtom>
+          <LinkAtom link="https://wa.me/+201550227582">
+            <ButtonAtom className={btnclass}>
+              <span>{buttonText}</span>
+            </ButtonAtom>
+          </LinkAtom>
         )}
 
         {buttonsArray && buttonsArray.length > 0 && (

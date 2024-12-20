@@ -28,8 +28,8 @@
 
 @mixin container {
   @media (min-width: 300px) {
-    padding-inline: 1.5rem;
-    width: calc(100% - 1.5rem);
+    padding-inline: 1rem;
+    width: calc(100% - 1rem);
     margin-inline: auto;
   }
   @media (min-width: 992px) {
