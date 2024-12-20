@@ -63,6 +63,11 @@
         top: 1px;
         bottom: 1px;
       }
+      @media (min-width:300px) and (max-width(767px)) {
+        img{
+            width: 20;
+        }
+      }
       padding: 33px 24px;
       color: $text-black;
       z-index: 20;
