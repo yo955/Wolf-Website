@@ -1,52 +1,82 @@
-$mobile: 600px;
-$tablet: 768px;
-$desktop: 1024px;
-@import '../_variables.scss';
-#services{
-@include section
-}
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin: 30px 0;
-    @include container
-}
-
-// .card {
-//     height: 256px;
-//     border: none;
-//     border-radius: 16px;
-//     overflow: hidden;
-//     position: relative;
-//     background-color: $primary-color;
-//     cursor: pointer;
-//     padding: 16px;
-//     gap: 16px;
-//     &:hover {
-//         background: linear-gradient(45deg, $color1, $color2);
-//     }
-// }
-// @media (min-width:300px) and (max-width:767px) {
-//     .offer{
-//         text-align: center;
-//     }
-// }
-.offerday {
-    width: 584px;
-    height: 32px;
-    padding: 4px 8px 4px 8px;
-    gap: 12px;
-    border-radius: 8px 0px 0px 0px;
-    opacity: 0px;
-    background-color: $ouer-color;
-    @media (max-width: $mobile) {
-        width: 343px;
-        height: 56px;
+    $mobile: 600px;
+    $tablet: 768px;
+    $desktop: 1024px;
+    @import '../_variables.scss';
+    #services {
+        @include section
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin: 30px 0;
+        @include container
+    }
+    
+    .card-sli {
+        height: 256px;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        background-color: $primary-color;
+        cursor: pointer;
+        padding: 16px;
+        gap: 16px;
+        &:hover {
+            background: linear-gradient(45deg, $color1, $color2);
+        }
+    }
+    
+    .offer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin: 30px 0;
+    }
+    
+    .offerday {
+        width: 584px;
+        height: 32px;
         padding: 4px 8px 4px 8px;
         gap: 12px;
         border-radius: 8px 0px 0px 0px;
         opacity: 0px;
+        background-color: $ouer-color;
+        .spn {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: center;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        @media (max-width: $mobile) {
+            width: 380px;
+            height: 56px;
+            padding: 4px 8px 4px 8px;
+            gap: 12px;
+            border-radius: 8px;
+            opacity: 0px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            .spn {
+                padding-left: 6.5rem;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: center;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
+        }
     }
-}

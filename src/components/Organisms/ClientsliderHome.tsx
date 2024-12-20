@@ -72,7 +72,7 @@ export function ClientsliderHome() {
       >
         {cardData.map((e, index) => (
           <SwiperSlide key={index}>
-            <Card className="card">
+            <Card className="card-sli">
               <CardContent sx={{ alignItems: "center", textAlign: "center" }}>
                 <Image
                   src={e.photo}
