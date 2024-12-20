@@ -13,7 +13,7 @@ export const RightQusteion = () => {
   const [openQuestionIndex, setOpenQuestionIndex] = useState<number | null>(
     null
   );
-  const [mainQuestion, setMAinQuestion] = useState<boolean>(true);
+  const [mainQuestion, setMAinQuestion] = useState<boolean>(false);
   const toggleMainbtn = () => {
     setMAinQuestion(!mainQuestion);
   };

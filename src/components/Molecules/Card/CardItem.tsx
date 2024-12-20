@@ -98,6 +98,7 @@ export const CardItem: React.FC<CardProps> = ({
         )}
 
         {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
+        <div className="image"></div>
       </div>
     </div>
   );
