@@ -28,7 +28,11 @@ $desktop: 1024px;
 //         background: linear-gradient(45deg, $color1, $color2);
 //     }
 // }
-
+@media (min-width:300px) and (max-width:767px) {
+    .offer{
+        text-align: center;
+    }
+}
 .offerday {
     width: 584px;
     height: 32px;
