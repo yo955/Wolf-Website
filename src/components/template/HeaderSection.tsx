@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "@/components";
+
 function HeaderSection() {
   return (
     <div className="headerSection">
@@ -19,11 +20,19 @@ function HeaderSection() {
         </p>
 
         <div className="avatar">
-          <img src="/images/Nav/islamAvatar.png" alt="" />
-          <p>Free 15-min call</p>
+          <img src="/images/Nav/islamAvatar.png" alt="Islam Avatar" />
+          {/* رابط لفتح واتساب */}
+          <a
+            href="https://wa.me/+201550227582" 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <p>Free 15-min call</p>
+          </a>
         </div>
         <div className="Avilable">
-          <span style={{paddingRight: "5px"}}>
+          <span style={{ paddingRight: "5px" }}>
             <svg
               width="16"
               height="17"
