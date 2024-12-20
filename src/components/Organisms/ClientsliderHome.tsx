@@ -27,7 +27,7 @@ import { Text } from "@/components";
 export function ClientsliderHome() {
   const value = 3.5;
   return (
-    <Container sx={{ mt: 10, mb: 20 }} className="con">
+    <Container sx={{ mt: 10, mb: 0 }} className="con">
       <Text
         text={
           <div className="pairenttextclients">

@@ -21,7 +21,7 @@ function HeaderSection() {
 
         <div className="avatar">
         <ImgAtom
-            src={"/images/Nav/islamAvatar.png"}
+            src={"/images/svg/qusetion-card/Avatar.svg"}
             alt={"Islam Avatar"}
             className={""}
             height={30}
