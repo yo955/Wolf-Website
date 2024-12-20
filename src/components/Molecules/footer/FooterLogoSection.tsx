@@ -27,7 +27,7 @@ export const FooterLogoSection: React.FC = () => {
       </div>
       <Line className="line-logo" />
       <HeadingAtom className="footer-title">
-        <p>
+        <p className="foter-text">
           We are here to create the best software product for your business So,
           feel free to contact us
         </p>
