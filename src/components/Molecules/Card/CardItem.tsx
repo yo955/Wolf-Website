@@ -1,11 +1,7 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { CardProps } from "@/assets/types/cardTypes";
-import {
-  ButtonAtom,
-  HeadingAtom,
-  ImgAtom,
-  ParagraphAtom,
-} from "@/components";
+import { ButtonAtom, HeadingAtom, ImgAtom, ParagraphAtom } from "@/components";
 import { List } from "./ListItem";
 
 export const CardItem: React.FC<CardProps> = ({
@@ -21,7 +17,11 @@ export const CardItem: React.FC<CardProps> = ({
   btnclass = "black-btn",
   buttonsArray,
   offer = "",
+  email,
+  whatsapp,
 }) => {
+  const [showNumber, setShowNumber] = useState(false);
+
   return (
     <div className="card">
       <div className="card-top">
@@ -65,21 +65,39 @@ export const CardItem: React.FC<CardProps> = ({
         )}
 
         {buttonsArray && buttonsArray.length > 0 && (
-          <div className="buttons-container">
+          <div className="buttons-container cursor-pointer">
             {buttonsArray.map((btn, index) => (
-              <ButtonAtom key={index} className={btnclass}>
-                <ImgAtom src={btn.image} alt="btn-img" width={24} height={24} />
-                {btn.text}
-              </ButtonAtom>
+              <a
+                key={index}
+                href={
+                  btn.text === "E-mail US"
+                    ? `mailto:${email}`
+                    : `https://wa.me/+20${whatsapp}`
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setShowNumber(true)}
+                onMouseLeave={() => setShowNumber(false)}
+              >
+                <ButtonAtom className={btnclass}>
+                  <ImgAtom
+                    src={btn.image}
+                    alt="btn-img"
+                    width={24}
+                    height={24}
+                  />
+                  {btn.text === "Chat on WhatsApp"
+                    ? showNumber
+                      ? `+2 ${whatsapp}`
+                      : "Chat on WhatsApp"
+                    : btn.text}
+                </ButtonAtom>
+              </a>
             ))}
           </div>
         )}
 
         {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
-
-        <div className="image">
-          
-        </div>
       </div>
     </div>
   );

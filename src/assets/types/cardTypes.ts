@@ -11,4 +11,6 @@ export interface CardProps {
   btnclass?: string;
   buttonsArray?: { text: string; image: string }[];
   offer?: string;
+  email?: string; 
+  whatsapp?: string; 
 }

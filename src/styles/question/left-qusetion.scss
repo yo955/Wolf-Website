@@ -1,21 +1,26 @@
 .left-container {
   max-width: 519px;
+
   .header-description {
     margin-block: 1.3rem;
+
     .paragraph {
       p {
         @include main-parargraph;
       }
     }
+
     .title {
       padding-right: 4rem;
       display: flex;
       flex-wrap: wrap;
+
       h1 {
         @include main-title;
       }
     }
   }
+
   .card-descriptions {
     background-color: $bg-gray;
     width: 503px;
@@ -26,7 +31,6 @@
     padding: 8px;
     box-sizing: border-box;
     @include flex(center, center, row, 0.2rem, wrap);
-    z-index: -1;
     margin: auto;
 
     .card-background {
@@ -43,6 +47,7 @@
       margin: 10px;
       @include radius;
     }
+
     .card-content {
       position: absolute;
       left: 24px;
@@ -51,18 +56,34 @@
       bottom: 1px;
       padding: 33px 24px;
       color: $text-black;
-      z-index: 10;
+      z-index: 20;
+
       .contact-btn {
+        @include contact-btn;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: #fff;
+        text-align: center;
+        border: none;
+        margin: 5px;
+
         &:nth-child(1),
         &:nth-child(2) {
           @include contact-btn;
         }
+
         &:nth-child(2) {
           background: $linear-gradient-btn;
         }
       }
+
       .card {
         z-index: -5;
+
         .card-top {
           width: 248px;
           @include flex(space-between, center, row, 0.5rem, nowrap);

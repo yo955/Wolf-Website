@@ -20,13 +20,15 @@ export const LeftQusteion = () => {
             imageUrl="/images/svg/qusetion-card/Avatar.svg"
             text="Didn’t find the answer?!"
             paragraph="I’m human being, just like you - ask me anything."
+            email="wolf.test90@gmail.com"
+            whatsapp="01550227582"
             buttonsArray={[
               {
                 text: "E-mail US",
                 image: "/images/svg/qusetion-card/google.svg",
               },
               {
-                text: "+966 59 744 2483",
+                text: "chat on whatsapp",
                 image: "/images/svg/qusetion-card/whats.svg",
               },
             ]}
