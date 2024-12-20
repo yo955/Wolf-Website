@@ -2,7 +2,6 @@
 import { useState } from "react";
 import {
   AnswerAtom,
-  HeadingAtom,
   ParagraphAtom,
   QusetionAtom,
 } from "@/components";

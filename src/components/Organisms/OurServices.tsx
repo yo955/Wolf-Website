@@ -208,7 +208,7 @@ export function OurServices() {
             <span className="textclients">we can help you with</span>{" "}
             <div className="offer">
               <span className="offerday">
-                🎉It's our birthday 40% off - 1-day limited offer <span className="spn">click to Learn
+                🎉It is our birthday 40% off - 1-day limited offer <span className="spn">click to Learn
                 more🎉</span>
               </span>
             </div>

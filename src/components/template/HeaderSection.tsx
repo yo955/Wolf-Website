@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "@/components";
+import { ImgAtom, Navbar } from "@/components";
 
 function HeaderSection() {
   return (
@@ -20,7 +20,13 @@ function HeaderSection() {
         </p>
 
         <div className="avatar">
-          <img src="/images/Nav/islamAvatar.png" alt="Islam Avatar" />
+        <ImgAtom
+            src={"/images/Nav/islamAvatar.png"}
+            alt={"Islam Avatar"}
+            className={""}
+            height={30}
+            width={30}
+          />
           {/* رابط لفتح واتساب */}
           <a
             href="https://wa.me/+201550227582" 
