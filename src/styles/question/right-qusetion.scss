@@ -6,7 +6,7 @@
       margin-bottom: 1rem;
     }
     @media (min-width: 992px) {
-      margin-bottom: 2rem;
+      margin-bottom: 4.5rem;
     }
     
     @include flex(start, start, column, 1rem, nowrap);

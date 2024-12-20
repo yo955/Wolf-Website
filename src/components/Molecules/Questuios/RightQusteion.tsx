@@ -13,7 +13,10 @@ export const RightQusteion = () => {
   const [openQuestionIndex, setOpenQuestionIndex] = useState<number | null>(
     null
   );
-
+  const [mainQuestion, setMAinQuestion] = useState<boolean>(true);
+  const toggleMainbtn = () => {
+    setMAinQuestion(!mainQuestion);
+  };
   const toggleAnswer = (index: number) => {
     setOpenQuestionIndex(openQuestionIndex === index ? null : index);
   };
@@ -23,19 +26,27 @@ export const RightQusteion = () => {
       <div className="main-content">
         <HeadingAtom className="right-title">
           <div className="main-question">
-            <h1>How easy is it to set up  Epoque?</h1>
+            <h1>What is Wolf Software Challenge and how dose It Work?</h1>
           </div>
-          <div className="icon">
-            <h1>-</h1>
+          <div className="icon cursor-pointer" onClick={toggleMainbtn}>
+            <h1>{mainQuestion ? "-" : "+"}</h1>
           </div>
         </HeadingAtom>
-        <ParagraphAtom className="right-paragraph">
-          <p>
-            Setting up  Epoque   is as easy as pie - and you don&apos;t even
-            have to bake anything. Our intuitive onboarding process will guide
-            you step by step. You&apos;ll be up and running before you know it
-          </p>
-        </ParagraphAtom>
+        {mainQuestion && (
+          <ParagraphAtom className="right-paragraph">
+            <p>
+              Wolf Software Challenge is a complete commerce platform that lets
+              you start, grow, and manage a business. With Wolf Software
+              Challenge, you can:
+              <br />
+              • Create and customize an online store.
+              <br />
+              • Sell in multiple places, including web, mobile, social media,
+              online marketplaces, brick-and-mortar locations, and pop-up shops.
+              <br />• Manage products, inventory, payments, and shipping.
+            </p>
+          </ParagraphAtom>
+        )}
       </div>
 
       {questions.map((question, index) => {
