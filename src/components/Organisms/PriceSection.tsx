@@ -11,7 +11,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
 
 export const PriceSection: React.FC = () => {
   return (
-    <div className="price-section">
+    <div className="price-section" id="pricing">
       <div className="price-container">
         <div className="price-description">
           <ParagraphAtom className="price-paragraph">

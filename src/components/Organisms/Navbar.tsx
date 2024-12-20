@@ -59,7 +59,8 @@ export const Navbar: React.FC = () => {
               Pricing
             </span>
             <span
-              className="link-nav"
+              className="link-nav "
+              
               onClick={() => handleSmoothScroll("#faqs")}
             >
               FAQs
