@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import {Link} from '@/components';
+import { Link } from '@/components';
 
 interface DrawerMenuProps {
   open: boolean;
@@ -56,7 +56,6 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
       </Box>
       <Link href="#services">
         <Typography
-          component="a"
           sx={{ fontSize: "24px", fontWeight: "400", lineHeight: "37px" }}
         >
           Services
@@ -64,7 +63,6 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
       </Link>
       <Link href="#work">
         <Typography
-          component="a"
           sx={{ fontSize: "24px", fontWeight: "400", lineHeight: "37px" }}
         >
           Work
@@ -72,7 +70,6 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
       </Link>
       <Link href="#pricing">
         <Typography
-          component="a"
           sx={{ fontSize: "24px", fontWeight: "400", lineHeight: "37px" }}
         >
           Pricing
@@ -80,7 +77,6 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
       </Link>
       <Link href="#faqs">
         <Typography
-          component="a"
           sx={{ fontSize: "24px", fontWeight: "400", lineHeight: "37px" }}
         >
           FAQs
@@ -89,4 +85,3 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
     </Drawer>
   );
 };
-
