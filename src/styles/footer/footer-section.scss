@@ -79,9 +79,9 @@
   }
 }
 
-@media (min-width: 300px) {
+@media (min-width: 300px) and (max-width:767px) {
   .foter-text {
-    width: 300px;
+    width: calc(100% - 5px);
     height: 63px;
     font-size: 14px;
     font-weight: 400;
