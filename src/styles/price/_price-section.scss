@@ -19,14 +19,14 @@
 
     .price-cards {
       background-color: $bg-gray;
-      overflow: visible; 
+      overflow: visible;
       padding: 1rem;
       @include radius;
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
       width: 100%;
-      box-sizing: border-box; 
+      box-sizing: border-box;
 
       .card {
         @include flex(left, space-between, row, 0, wrap);
@@ -170,6 +170,7 @@
           }
 
           .card-description {
+            margin-block: 1rem;
             .card-title {
               h1 {
                 font-size: 20px;
