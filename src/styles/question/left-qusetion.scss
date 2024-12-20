@@ -18,8 +18,8 @@
     }
     .card-descriptions {
         background-color: $bg-gray;
-        width: 450px;
-        height: 305px;
+        width: 343px;
+        height: 335px;
         position: relative;
         overflow: hidden;
         @include radius;
@@ -80,6 +80,17 @@
                     0.5rem,
                     nowrap);
                 }
+            }
+        }
+        @media (min-width: 450px) {
+            .card-descriptions {
+                width: 243px;
+                height: 234px;
+                padding: 6px 0px 0px 0px;
+                gap: 0px;
+                border-radius: 15.86px 0px 0px 0px;
+                border: 0.66px 0px 0px 0px;
+                opacity: 0px;
             }
         }
     }
