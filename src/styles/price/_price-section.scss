@@ -19,12 +19,14 @@
 
     .price-cards {
       background-color: $bg-gray;
-      overflow: hidden;
+      overflow: visible; 
       padding: 1rem;
       @include radius;
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+      width: 100%;
+      box-sizing: border-box; 
 
       .card {
         @include flex(left, space-between, row, 0, wrap);
@@ -34,6 +36,8 @@
         text-align: left;
         position: relative;
         overflow: hidden;
+        width: 100%;
+
         .black-btn {
           width: 100%;
           span {
@@ -42,6 +46,7 @@
             }
           }
         }
+
         @media (min-width: 992px) {
           height: 491px;
         }
@@ -90,9 +95,11 @@
           background-color: $bg-white-card;
           border: 1px solid $border-white-card;
           color: $text-black;
+
           @media (min-width: 768px) {
             background-image: url("/images/svg/price-cards/img-1.svg");
           }
+
           .card-top {
             color: $text-black;
           }
@@ -139,26 +146,30 @@
         }
 
         &:nth-child(3) {
-          @include flex(start, center, column, 4rem, nowrap);
-          padding-top: 20px;
-          padding-left: 20px;
+          @include flex(start, center, column, 2rem, nowrap);
+          padding: 20px 10px;
           background-color: $bg-white-card;
           border: 1px solid $border-white-card;
           color: $text-black;
-          // position: relative;
+          position: relative;
+          width: 100%;
+
+          @media (min-width: 768px) {
+            padding: 20px;
+          }
 
           .card-top {
             color: $text-white;
             width: 100%;
             height: 0;
             @include flex(space-between, start, row, 0, nowrap);
+
             .card-image {
               width: 70px;
             }
           }
 
           .card-description {
-            // position: absolute;
             .card-title {
               h1 {
                 font-size: 20px;
@@ -166,20 +177,19 @@
             }
 
             .image {
-              position: absolute;
+              width: 100%;
+              max-width: 321px;
+              height: auto;
               background-image: url("/images/svg/price-cards/phone.svg");
               background-position: center center;
               background-size: contain;
               background-repeat: no-repeat;
-              width: 321px;
-              height: 321px;
 
               @media (min-width: 300px) and (max-width: 767px) {
                 position: relative;
                 bottom: -25px;
                 left: 50%;
                 transform: translateX(-50%);
-                min-height: fit-content;
               }
 
               @media (min-width: 992px) {
