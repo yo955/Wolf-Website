@@ -39,8 +39,8 @@ export const FooterLogoSection: React.FC = () => {
             className="footer-avatar"
             src="/images/svg/qusetion-card/Avatar.svg"
             alt="avatar-logo"
-            width={32}
-            height={32}
+            width={45}
+            height={45}
           />
 
           <ParagraphAtom className="avatar-text">
@@ -49,14 +49,14 @@ export const FooterLogoSection: React.FC = () => {
         </ButtonAtom>
       </LinkAtom>
 
-      <ParagraphAtom className="available">
+      <ParagraphAtom className="available ">
         <p>
           <FaRegCircle
             className={`circle ${isopen ? "open" : ""}`}
             onClick={toggleAvailable}
           />
         </p>
-        <p>Available now!</p>
+        <p >Available now!</p>
       </ParagraphAtom>
     </div>
   );

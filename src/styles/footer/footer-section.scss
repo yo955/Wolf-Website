@@ -1,5 +1,4 @@
 .footer-section {
-  background-color: $bg-footer;
   @media (min-width: 300px) and (max-width: 767px) {
     background-color: transparent;
     @include section;
@@ -24,10 +23,9 @@
     left: 0;
     top: 0;
     @media (min-width: 300px) and (max-width: 767px) {
-      padding: 10px;
-      width: 100%;
-      height: 100%;
       @include container;
+      width: 100% !important;
+      height: 100%;
       overflow: hidden;
     }
     width: calc(100% - 24px);
@@ -50,9 +48,10 @@
       overflow: hidden;
       width: 100%;
       .bottom-container {
-        @media (min-width: 300px) {
+        @media (min-width: 300px) and (max-width:991px){
           text-align: center;
           @include flex(center, center, column, 1rem, wrap);
+          margin-top: 0.5rem;
         }
         @media (min-width: 992px) {
           @include flex(space-between, center, row, 1rem, nowrap);

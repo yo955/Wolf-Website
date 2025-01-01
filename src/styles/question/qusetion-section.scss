@@ -5,12 +5,12 @@
     @include container;
     flex: 1;
 
-    @media (min-width: 992px) {
+    @media (min-width: 998px) {
       @include flex(space-between, center, row, 1rem, nowrap);
     }
 
-    @media (min-width: 768px) and (max-width: 991px) {
-      @include flex(space-between, baseline, row, 1rem, nowrap);
+    @media (min-width: 768px) and (max-width: 997px) {
+      @include flex(space-between, baseline, column, 1rem, nowrap);
     }
 
     @media (max-width: 767px) {

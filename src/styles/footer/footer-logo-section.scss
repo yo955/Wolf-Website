@@ -36,7 +36,7 @@
 
   .available {
     @include flex(start, center, row, 0.5rem, nowrap);
-
+    margin-bottom: 20px;
     .circle {
       width: 16px;
       height: 16px;

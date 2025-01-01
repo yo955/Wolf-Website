@@ -19,7 +19,7 @@ import PhoneData from "../../../data/PhoneData";
 
 export function ImageSlider() {
   return (
-    <div className="w-full">
+    <div className="w-full bg-none">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -48,12 +48,12 @@ export function ImageSlider() {
       >
         {PhoneData.map((e, index) => (
           <SwiperSlide key={index}>
-            <Card sx={{border:"none"}}>
+            <Card sx={{border:"none",background:"none"}}>
               <CardContent>
                 <Image
                   src={e.photo}
                   alt="image"
-                  width={302}
+                  width={402}
                   height={346}
                   style={{
                     borderRadius: "18.52px",

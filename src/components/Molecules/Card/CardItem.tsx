@@ -36,8 +36,8 @@ export const CardItem: React.FC<CardProps> = ({
           <ImgAtom
             src={imageUrl || ""}
             alt={title || ""}
-            width={70}
-            height={70}
+            width={150}
+            height={150}
             className="card-image"
           />
         )}
@@ -107,7 +107,7 @@ export const CardItem: React.FC<CardProps> = ({
           </div>
         )}
 
-        {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
+        {chat && <ParagraphAtom className="chat-link" >{chat}</ParagraphAtom>}
         <div className="image"></div>
       </div>
     </div>
