@@ -14,13 +14,12 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 // Import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-import Container from "@mui/material/Container";
 import Image from "next/image";
 import PhoneData from "../../../data/PhoneData";
 
 export function ImageSlider() {
   return (
-    <Container sx={{ mt: 10, mb: 3 }} className="">
+    <div className="w-full">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -65,6 +64,6 @@ export function ImageSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Container>
+    </div>
   );
 }
