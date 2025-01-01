@@ -21,12 +21,12 @@ export const CardItem: React.FC<CardProps> = ({
   description,
   text,
   btnclass = "black-btn",
-  buttonsArray,
   offer = "",
   email,
   whatsapp,
 }) => {
-  const [showNumber, setShowNumber] = useState(false);
+  const [showNumber, setShowNumber] = useState<boolean>(false);
+  const [showEmail, setShowEmail] = useState<boolean>(false);
 
   return (
     <div className="card">
@@ -66,7 +66,7 @@ export const CardItem: React.FC<CardProps> = ({
         )}
         {listItem && <List title={offer} items={listItem} />}
 
-        {buttonText && !buttonsArray && (
+        {buttonText && (
           <LinkAtom link="https://wa.me/+201550227582">
             <ButtonAtom className={btnclass}>
               <span>{buttonText}</span>
@@ -74,40 +74,54 @@ export const CardItem: React.FC<CardProps> = ({
           </LinkAtom>
         )}
 
-        {buttonsArray && buttonsArray.length > 0 && (
+        {whatsapp && email && (
           <div className="buttons-container cursor-pointer">
-            {buttonsArray.map((btn, index) => (
-              <a
-                key={index}
-                href={
-                  btn.text === "E-mail US"
-                    ? `mailto:${email}`
-                    : `https://wa.me/+20${whatsapp}`
-                }
-                target="_blank"
-                rel="noopener noreferrer"
+            {whatsapp && (
+              <div
+                className="EmailButton"
+                onMouseEnter={() => setShowEmail(true)}
+                onMouseLeave={() => setShowEmail(false)}
+              >
+                <LinkAtom link={`https://wa.me/+2${whatsapp}`}>
+                  <ButtonAtom className={btnclass}>
+                    <ImgAtom
+                      src="/images/svg/qusetion-card/google.svg"
+                      alt="google-logo"
+                      width={25}
+                      height={25}
+                    />
+                    <span>
+                      {showEmail ? "wolf@gmail.com" : "E-mail US"}
+                    </span>
+                  </ButtonAtom>
+                </LinkAtom>
+              </div>
+            )}
+            {email && (
+              <div
+                className="PhoneButton"
                 onMouseEnter={() => setShowNumber(true)}
                 onMouseLeave={() => setShowNumber(false)}
               >
-                <ButtonAtom className={btnclass}>
-                  <ImgAtom
-                    src={btn.image}
-                    alt="btn-img"
-                    width={24}
-                    height={24}
-                  />
-                  {btn.text === "Chat on WhatsApp"
-                    ? showNumber
-                      ? `+2 ${whatsapp}`
-                      : "Chat on WhatsApp"
-                    : btn.text}
-                </ButtonAtom>
-              </a>
-            ))}
+                <LinkAtom link={`mailto:${email}`}>
+                  <ButtonAtom className={btnclass}>
+                    <ImgAtom
+                      src="/images/svg/qusetion-card/whats.svg"
+                      alt="whats-logo"
+                      width={25}
+                      height={25}
+                    />
+                    <span>
+                      {showNumber ? "01550227582" : "Chat on whatsApp"}
+                    </span>
+                  </ButtonAtom>
+                </LinkAtom>
+              </div>
+            )}
           </div>
         )}
 
-        {chat && <ParagraphAtom className="chat-link" >{chat}</ParagraphAtom>}
+        {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
         <div className="image"></div>
       </div>
     </div>
