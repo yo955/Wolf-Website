@@ -1,7 +1,10 @@
-import React from "react";
+"use client";
 import { Navbar } from "@/components";
+import { useState } from "react";
 
 function HeaderSection() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="headerSection">
       <div>
@@ -19,38 +22,42 @@ function HeaderSection() {
           your business.
         </p>
 
-        <div className="avatar">
-          <img src="/images/Nav/islamAvatar.png" alt="Islam Avatar" />
-          {/* رابط لفتح واتساب */}
-          <a
-            href="https://wa.me/+201550227582" 
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <p>Free 15-min call</p>
-          </a>
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {isHovered ? (
+            <div className="avatar-hover">
+              <img src="/images/Nav/Framehover.png" alt="Islam Avatar" />
+              <a
+                href="https://wa.me/+201550227582"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <p>Free 15-min call</p>
+              </a>
+            </div>
+          ) : (
+            <div className="avatar">
+              <img src="/images/Nav/islamAvatar.png" alt="Islam Avatar" />
+              <a
+                href="https://wa.me/+201550227582"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <p>Free 15-min call</p>
+              </a>
+            </div>
+          )}
         </div>
+
         <div className="Avilable">
-          <span style={{ paddingRight: "5px" }}>
-            <svg
-              width="16"
-              height="17"
-              viewBox="0 0 16 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                y="0.5"
-                width="16"
-                height="16"
-                rx="8"
-                fill="#00FF22"
-                fillOpacity="0.25"
-              />
-              <rect x="4" y="4.5" width="8" height="8" rx="4" fill="#00CE1B" />
-            </svg>
-          </span>
+          <div style={{ paddingRight: "5px" }}>
+            <div className="blinking-dot"></div>
+          </div>
+
           <span className="Avilable-text">Available now!</span>
         </div>
       </div>
