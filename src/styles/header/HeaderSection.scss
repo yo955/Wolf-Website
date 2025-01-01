@@ -3,7 +3,7 @@ $mobile: 600px;
 $tablet: 768px;
 $desktop: 1024px;
 .headerSection {
-    background-image: url("/images/Nav/section.png");
+    background-image: url('/images/Nav/section.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +11,7 @@ $desktop: 1024px;
     height: 530px;
     top: 62px;
     gap: 0px;
+    opacity: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +46,7 @@ $desktop: 1024px;
         width: 300px;
         height: 72px;
         gap: 0px;
+        opacity: 0px;
         font-size: 24px;
         font-weight: 600;
         line-height: 36px;
@@ -71,6 +73,7 @@ $desktop: 1024px;
     gap: 10px;
     border-radius: 12px;
     border: 0.5px 0px 0px 0px;
+    opacity: 0px;
     background-color: $color-dark-gray;
     display: flex;
     align-items: center;
@@ -81,6 +84,28 @@ $desktop: 1024px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.avatar-hover {
+    width: 248px;
+    height: 48px;
+    padding: 12px 16px 12px 8px;
+    gap: 10px;
+    border-radius: 12px;
+    border: 0.5px 0px 0px 0px;
+    opacity: 0px;
+    background-color: $color-dark-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 19px;
+    color: $color-white;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -89,3 +114,42 @@ $desktop: 1024px;
     align-items: center;
     flex-direction: column;
 }
+
+.blinking-dot-container {
+    padding-right: 5px;
+    .blinking-dot {
+        width: 16px; // عرض النقطة
+        height: 16px; // ارتفاع النقطة
+        border-radius: 50%; // جعل النقطة دائرية
+        background-color: #00ce1b; // اللون الأخضر الأساسي
+        box-shadow: 0 0 8px rgba(0, 206, 27, 0.8); // تأثير الإضاءة حول النقطة
+        animation: blink 1.5s infinite; // الحركة
+    }
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1; // النقطة مرئية
+            transform: scale(1); // الحجم الطبيعي
+        }
+        50% {
+            opacity: 0.3; // النقطة شبه شفافة
+            transform: scale(0.8); // الحجم أصغر
+        }
+    }
+}
+.available {
+    @include flex(start, center, row, 0.5rem, nowrap);
+
+    color: white;
+    .circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: black;
+    }
+
+    .open {
+      background-color: #00ff22a5;
+    }
+  }

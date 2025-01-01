@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { CardProps } from "@/assets/types/cardTypes";
 import {
@@ -25,16 +26,18 @@ export const CardItem: React.FC<CardProps> = ({
   email,
   whatsapp,
 }) => {
-  const [showNumber, setShowNumber] = useState<boolean>(false);
-  const [showEmail, setShowEmail] = useState<boolean>(false);
+  const [showNumber, setShowNumber] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+  const [showText, setShowText] = useState(true);
 
   return (
     <div className="card">
+      {/* Card Top */}
       <div className="card-top">
         {icon && <div className="icon">{icon}</div>}
         {imageUrl && (
           <ImgAtom
-            src={imageUrl || ""}
+            src={imageUrl}
             alt={title || ""}
             width={150}
             height={150}
@@ -47,6 +50,8 @@ export const CardItem: React.FC<CardProps> = ({
           </HeadingAtom>
         )}
       </div>
+
+      {/* Card Description */}
       <div className="card-description">
         {title && (
           <HeadingAtom className="card-title">
@@ -58,7 +63,6 @@ export const CardItem: React.FC<CardProps> = ({
             <p>{description}</p>
           </ParagraphAtom>
         )}
-
         {paragraph && (
           <ParagraphAtom className="card-paragraph">
             <p>{paragraph}</p>
@@ -66,23 +70,31 @@ export const CardItem: React.FC<CardProps> = ({
         )}
         {listItem && <List title={offer} items={listItem} />}
 
+        {/* Button Section */}
         {buttonText && (
-          <LinkAtom link="https://wa.me/+201550227582">
-            <ButtonAtom className={btnclass}>
-              <span>{buttonText}</span>
-            </ButtonAtom>
-          </LinkAtom>
+          <div
+            onMouseEnter={() => setShowText(false)}
+            onMouseLeave={() => setShowText(true)}
+          >
+            <LinkAtom link="https://wa.me/+201550227582">
+              <ButtonAtom className={btnclass}>
+                <span>{showText ? `${buttonText}` : `Let's talk`}</span>
+              </ButtonAtom>
+            </LinkAtom>
+          </div>
         )}
 
+        {/* WhatsApp and Email Buttons */}
         {whatsapp && email && (
-          <div className="buttons-container cursor-pointer">
+          <div className="buttons-container">
+            {/* WhatsApp Button */}
             {whatsapp && (
               <div
                 className="EmailButton"
                 onMouseEnter={() => setShowEmail(true)}
                 onMouseLeave={() => setShowEmail(false)}
               >
-                <LinkAtom link={`https://wa.me/+2${whatsapp}`}>
+                <LinkAtom link={`mailto:${email}`}>
                   <ButtonAtom className={btnclass}>
                     <ImgAtom
                       src="/images/svg/qusetion-card/google.svg"
@@ -90,20 +102,20 @@ export const CardItem: React.FC<CardProps> = ({
                       width={25}
                       height={25}
                     />
-                    <span>
-                      {showEmail ? "wolf@gmail.com" : "E-mail US"}
-                    </span>
+                    <span>{showEmail ? "wolf@gmail.com" : "E-mail Us"}</span>
                   </ButtonAtom>
                 </LinkAtom>
               </div>
             )}
+
+            {/* Email Button */}
             {email && (
               <div
                 className="PhoneButton"
                 onMouseEnter={() => setShowNumber(true)}
                 onMouseLeave={() => setShowNumber(false)}
               >
-                <LinkAtom link={`mailto:${email}`}>
+                <LinkAtom link={`https://wa.me/+2${whatsapp}`}>
                   <ButtonAtom className={btnclass}>
                     <ImgAtom
                       src="/images/svg/qusetion-card/whats.svg"
@@ -112,7 +124,7 @@ export const CardItem: React.FC<CardProps> = ({
                       height={25}
                     />
                     <span>
-                      {showNumber ? "01550227582" : "Chat on whatsApp"}
+                      {showNumber ? "01550227582" : "Chat on WhatsApp"}
                     </span>
                   </ButtonAtom>
                 </LinkAtom>
@@ -121,6 +133,7 @@ export const CardItem: React.FC<CardProps> = ({
           </div>
         )}
 
+        {/* Chat Section */}
         {chat && <ParagraphAtom className="chat-link">{chat}</ParagraphAtom>}
         <div className="image"></div>
       </div>

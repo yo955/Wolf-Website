@@ -1,7 +1,15 @@
-import React from "react";
-import { ImgAtom, Navbar } from "@/components";
+"use client";
+import { Navbar, ParagraphAtom } from "@/components";
+import Link from "next/link";
+import { useState } from "react";
+import { FaRegCircle } from "react-icons/fa6";
 
 function HeaderSection() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isopen, setIsOpen] = useState<boolean>(true);
+  const toggleAvailable = () => {
+    setIsOpen(!isopen);
+  };
   return (
     <div className="headerSection">
       <div>
@@ -19,46 +27,56 @@ function HeaderSection() {
           your business.
         </p>
 
-        <div className="avatar">
-        <ImgAtom
-            src={"/images/svg/qusetion-card/Avatar.svg"}
-            alt={"Islam Avatar"}
-            className={""}
-            height={30}
-            width={30}
-          />
-          {/* رابط لفتح واتساب */}
-          <a
-            href="https://wa.me/+201550227582" 
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <p>Free 15-min call</p>
-          </a>
-        </div>
-        <div className="Avilable">
-          <span style={{ paddingRight: "5px" }}>
-            <svg
-              width="16"
-              height="17"
-              viewBox="0 0 16 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                y="0.5"
-                width="16"
-                height="16"
-                rx="8"
-                fill="#00FF22"
-                fillOpacity="0.25"
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {isHovered ? (
+            <div className="avatar-hover">
+              <div className="logos flex items-center gap-1">
+                <img src="/images/Nav/Framehover.png" alt="Islam Avatar" />
+                <span>+</span>
+                <img
+                  src="/images/svg/qusetion-card/Avatar.svg"
+                  alt="Islam Avatar"
+                />
+              </div>
+              <Link
+                href="https://wa.me/+201550227582"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <p>Free 15-min call</p>
+              </Link>
+            </div>
+          ) : (
+            <div className="avatar">
+              <img
+                src="/images/svg/qusetion-card/Avatar.svg"
+                alt="Islam Avatar"
               />
-              <rect x="4" y="4.5" width="8" height="8" rx="4" fill="#00CE1B" />
-            </svg>
-          </span>
-          <span className="Avilable-text">Available now!</span>
+              <a
+                href="https://wa.me/+201550227582"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <p>Free 15-min call</p>
+              </a>
+            </div>
+          )}
         </div>
+
+        <ParagraphAtom className="available">
+          <p>
+            <FaRegCircle
+              className={`circle ${isopen ? "open" : ""}`}
+              onClick={toggleAvailable}
+            />
+          </p>
+          <p>Available now!</p>
+        </ParagraphAtom>
       </div>
     </div>
   );
