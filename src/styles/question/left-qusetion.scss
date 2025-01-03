@@ -26,19 +26,24 @@
   }
   .card-descriptions {
     background-color: $bg-gray;
-    width: 100%;
-    height: 335px;
+    width: 519px;
+    height: 321px;
+    @media (max-width: 767px) {
+    width: calc(100% - 0.1rem);
+    }
+    @media (min-width: 768px) and (max-width: 998px) {
+      width: 100%;
+    }
     position: relative;
     overflow: hidden;
     @include radius;
-    padding: 8px;
     box-sizing: border-box;
     @include flex(center, center, row, 0.2rem, wrap);
     margin: auto;
     @media (min-width: 300px) and (max-width: 767px) {
       .card-descriptions {
         width: 100%;
-        height: 400px;
+        height: 500px;
       }
     }
     .card-paragraph {
@@ -48,15 +53,15 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: calc(100% - 16px);
-      height: calc(100% - 16px);
+      width: 100%;
+      height: 95%;
       background-image: url("/images/svg/qusetion-card/card.svg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       z-index: 10;
-      margin: 10px;
-      @include radius;
+      margin: 8px auto;
+      border-radius: 40px;
     }
     .card-content {
       position: absolute;
@@ -76,18 +81,23 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 20px;
-        border-radius: 4px;
-        color: #fff;
+        padding: 12px 16px;
+        gap: 10px;
+        border-radius: 12px;
+        color: #ffffff;
         text-align: center;
         border: none;
-        margin: 5px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
         &:nth-child(1),
         &:nth-child(2) {
           @include contact-btn;
         }
         &:nth-child(2) {
           background: $linear-gradient-btn;
+        }
+        &:hover {
+          background: linear-gradient(107.33deg, #f0f0f0 2.74%, #e0e0e0 112.49%),
+            #ffffff;
         }
       }
       .card {

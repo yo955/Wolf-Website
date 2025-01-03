@@ -66,39 +66,29 @@
   }
 
   .available {
-    @include flex(start, center, row, 0.5rem, nowrap);
-    .circle {
-      /* Auto layout */
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 4px;
+    // @include flex(start, center, row, 0.5rem, nowrap);
+    .circle { 
       width: 16px;
       height: 16px;
-      background: rgba(0, 255, 34, 0.25);
-      border-radius: 50px;
-
+      background: green;
+      border-radius: 50% ;
+      animation: glow 1.5s infinite alternate;
       /* Inside auto layout */
       flex: none;
       order: 0;
       flex-grow: 0;
-     
+     @keyframes glow {
+      0%{
+        box-shadow: 0 0 50px green , 0 0 60px green , 0 0 70px green;
+        background: green;
+      }
+      100%{
+        box-shadow: 0 0 80px green , 0 0 90px green , 0 0 100px green;
+        background: lightgreen;
+      }
+     }
     }
 
-    .open {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 4px;
-      width: 16px;
-      height: 16px;
-      background-color: rgb(16, 204, 41);
-      border-radius: 100px;
-      box-shadow: rgba(49, 238, 51, 0.5) 0px 0px 20px 0px;
-      /* Inside auto layout */
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-    }
+
   }
 }

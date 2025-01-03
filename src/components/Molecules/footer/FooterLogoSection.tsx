@@ -85,7 +85,7 @@ export const FooterLogoSection: React.FC = () => {
           onMouseEnter={() => setIsAvailable(true)}
           onMouseLeave={() => setIsAvailable(false)}
         >
-          <div className={`${isAvailable  ? "open" : "circle"}`}></div>
+          <div className={`${isAvailable  ? "circle" : "circle"}`}></div>
         </div>
         <p>Available now!</p>
       </ParagraphAtom>
