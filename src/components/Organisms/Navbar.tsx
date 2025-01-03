@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
     <div className="NAVBAR">
       <div className="navbar-content">
         <Link href="/">
-          <img src="/images/Nav/logo.png" alt="Logo" className="logo" />
+          <img src="/images/Nav/logo.png" alt="Logo" className="logo-wo" />
         </Link>
         {isDesktop && (
           <>

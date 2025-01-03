@@ -1,7 +1,6 @@
 //******** margin & padding sections *********
 $margin-section: 5rem;
 $padding-inline: 5rem;
-
 // colors
 $primary-color: #ffffff;
 $secondary-color: #000000;
@@ -14,7 +13,8 @@ $color-light-gray: #ECECEC;
 $color-light-gray-transparent: #ECECEC;
 $color-gray: #E1E1E2;
 $color-dark-gray: #121212;
-$color-white: #FFFFFF;$dark-color: #121212;
+$color-white: #FFFFFF;
+$dark-color: #121212;
 $footer-color: #c8c8c8;
 // background-colors
 $bg-gray: #e7e7e7;
@@ -26,42 +26,29 @@ $bg-white-btn: $primary-color;
 $bg-footer: #000b1e;
 // mix-color fn
 $linear-gradient-btn: linear-gradient(to right, #f0f0f0, #e0e0e0);
-
 // main-paragraph
 $para-color: #494949;
 $para-font-size: 18px;
 $para-line-height: 27px;
-
 // main-title
 $title-color: #121212;
 $title-font-size: 32px;
 $title-line-height: 48px;
-
 // borders color
 $border-black-btn: #575760;
 $border-yellow-card: #f4e7c6;
 $border: #d7d7d7;
-
 // font family
 $font-stack: "Poppins",
 sans-serif;
-
 // fonts weights
 $font-regular: 400;
 $font-medium: 500;
 $font-bold: 600;
 // breakpoints
-$breakPoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
-
+$breakPoints: ( sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, );
 // text color
 $text-black: $secondary-color;
 $text-white: $primary-color;
-
 // Radius
 $main-radius: 24px;

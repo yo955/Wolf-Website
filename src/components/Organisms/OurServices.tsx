@@ -65,6 +65,8 @@ function HoverCard({ item }) {
         gap: "16px",
         "&:hover": {
           background: "linear-gradient(45deg,#F0F0F0, #E0E0E0)",
+          boxShadow: "0px 3px 5px rgba(0, 0, 0, 0.25)", 
+          transition: "box-shadow 0.3s ease, background 0.5s ease",
         },
       }}
     >

@@ -1,5 +1,5 @@
 "use client";
-import { Navbar } from "@/components";
+import { Navbar, ImgAtom } from "@/components";
 import { useState } from "react";
 
 function HeaderSection() {
@@ -40,7 +40,7 @@ function HeaderSection() {
             </div>
           ) : (
             <div className="avatar">
-              <img src="/images/Nav/islamAvatar.png" alt="Islam Avatar" />
+              <img src="/images/Nav/Logo mark.png" alt=" Avatar" />
               <a
                 href="https://wa.me/+201550227582"
                 target="_blank"
@@ -54,9 +54,7 @@ function HeaderSection() {
         </div>
 
         <div className="Avilable">
-          <div style={{ paddingRight: "5px" }}>
-            <div className="blinking-dot"></div>
-          </div>
+          <div className="glowing-dot mx-1 mb-1"></div>
 
           <span className="Avilable-text">Available now!</span>
         </div>
