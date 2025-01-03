@@ -1,5 +1,4 @@
 import {
-  Line,
   ParagraphAtom,
   FooterLogoSection,
   SocialMediaIcons,
@@ -11,7 +10,6 @@ export const FooterSection: React.FC = () => (
       <div className="top-section">
         <FooterLogoSection />
       </div>
-      <Line className="line-bottom" />
       <div className=" bottom-section">
         <div className="bottom-container">
           <ParagraphAtom className="para-icons">

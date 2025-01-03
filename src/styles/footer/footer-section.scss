@@ -1,24 +1,30 @@
 .footer-section {
-  @media (min-width: 300px) and (max-width: 767px) {
-    background-color: transparent;
-    @include section;
-    overflow: hidden;
-  }
   padding: 32px;
   position: relative;
-  @media (min-width: 300px)  {
-    height: 500px;
-    margin: 2rem 1rem;
+  padding: 0 30px;
+  top: 0;
+  margin-block: 3rem;
+  margin-inline: 1rem;
+
+  @media (min-width: 300px) and (max-width: 767px) {
+    background-color: transparent;
+    
+    overflow: hidden;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    min-height: 500px;
+  }
+  @media (max-width: 767px) {
+    min-height: 500px;
   }
   @media (min-width: 992px) {
-    overflow: hidden;
-    height: 413px;
-    margin: 2.5rem;
+    min-height: 413px;
   }
   @include radius;
   .footer-container {
-    @include flex(space-between, center, column, 0, nowrap);
     position: absolute;
+    margin: 0 auto;
+    @include flex(space-between, center, column, 0, nowrap);
     padding: 24px;
     left: 0;
     top: 0;
@@ -28,8 +34,10 @@
       height: 100%;
       overflow: hidden;
     }
-    width: calc(100% - 24px);
-    height: calc(100% - 24px);
+
+    height: 100%;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
     background-image: url("/images/svg/footer/Section.png");
     background-size: cover;
     background-position: left;
@@ -45,10 +53,18 @@
       overflow: hidden;
     }
     .bottom-section {
-      overflow: hidden;
-      width: 100%;
+      padding: 16px 0px;
+      gap: 632px;
+      position: absolute;
+      width: 1216px;
+      height: 52px;
+      left: calc(50% - 1216px / 2);
+      top: 332px;
+      mix-blend-mode: normal;
+      border-top: 0.5px solid rgba(200, 200, 200, 0.5);
+      border-radius: 0px;
       .bottom-container {
-        @media (min-width: 300px) and (max-width:991px){
+        @media (min-width: 300px) and (max-width: 991px) {
           text-align: center;
           @include flex(center, center, column, 1rem, wrap);
           margin-top: 0.5rem;
@@ -64,11 +80,7 @@
       }
     }
   }
-  .line-bottom {
-    width: 100%;
-    border: 0.5px solid darken($color: $footer-color, $amount: 45);
-    margin-block: 0.2rem;
-  }
+
   h1,
   p,
   .social-icons {
@@ -84,7 +96,7 @@
   }
 }
 
-@media (min-width: 300px) and (max-width:767px) {
+@media (min-width: 300px) and (max-width: 767px) {
   .foter-text {
     width: calc(100% - 5px);
     height: 63px;
@@ -96,10 +108,7 @@
     text-decoration-skip-ink: none;
     position: absolute;
     left: 0;
+    line-height: 28px;
   }
-  .line-bottom {
-    width: 100%;
-    border: 0.5px solid darken($color: $footer-color, $amount: 45);
-    margin-block: 0.5rem;
-  }
+ 
 }

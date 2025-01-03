@@ -7,5 +7,5 @@ interface LogoAtomProps {
 }
 
 export const LogoAtom: React.FC<LogoAtomProps> = ({ src, alt, className }) => (
-  <ImgAtom src={src} alt={alt} className={className} width={200} height={44} />
+  <ImgAtom src={src} alt={alt} className={className} width={262} height={80} />
 );

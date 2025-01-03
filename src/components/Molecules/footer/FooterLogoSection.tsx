@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { FaRegCircle } from "react-icons/fa6";
 import {
   ButtonAtom,
   HeadingAtom,
@@ -14,10 +13,8 @@ import React from "react";
 
 export const FooterLogoSection: React.FC = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [isopen, setIsOpen] = useState<boolean>(true);
-  const toggleAvailable = () => {
-    setIsOpen(!isopen);
-  };
+  const [isAvailable, setIsAvailable] = useState<boolean>(false);
+
   return (
     <div className="footer-logo-section">
       <div className="logo">
@@ -35,11 +32,12 @@ export const FooterLogoSection: React.FC = () => {
         </p>
       </HeadingAtom>
       <div
+        className="check-hovered"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {isHovered ? (
-          <div className="footer-avatar-hover flex items-center gap-1">
+          <div className="footer-btn-hover flex items-center gap-1">
             <ImgAtom
               className="you-logo"
               src="/images/Nav/Framehover.png"
@@ -47,7 +45,7 @@ export const FooterLogoSection: React.FC = () => {
               width={35}
               height={35}
             />
-            <span>+</span>
+            <span className="text-white">+</span>
             <ImgAtom
               className="avatar-logo"
               src="/images/svg/qusetion-card/Avatar.svg"
@@ -62,11 +60,11 @@ export const FooterLogoSection: React.FC = () => {
             </LinkAtom>
           </div>
         ) : (
-          <div className="footer-avatar">
+          <div className="btn-div">
             <LinkAtom link="https://wa.me/+201550227582">
               <ButtonAtom className="footer-btn">
                 <ImgAtom
-                  className="footer-avatar"
+                  className="footer-btn-image"
                   src="/images/svg/qusetion-card/Avatar.svg"
                   alt="avatar-logo"
                   width={45}
@@ -83,12 +81,12 @@ export const FooterLogoSection: React.FC = () => {
       </div>
 
       <ParagraphAtom className="available">
-        <p>
-          <FaRegCircle
-            className={`circle ${isopen ? "open" : ""}`}
-            onClick={toggleAvailable}
-          />
-        </p>
+        <div
+          onMouseEnter={() => setIsAvailable(true)}
+          onMouseLeave={() => setIsAvailable(false)}
+        >
+          <div className={`${isAvailable  ? "open" : "circle"}`}></div>
+        </div>
         <p>Available now!</p>
       </ParagraphAtom>
     </div>
