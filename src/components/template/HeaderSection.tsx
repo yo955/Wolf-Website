@@ -1,5 +1,5 @@
 "use client";
-import { Navbar, ParagraphAtom } from "@/components";
+import { ImgAtom, Navbar, ParagraphAtom } from "@/components";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -31,12 +31,22 @@ function HeaderSection() {
           {isHovered ? (
             <div className="avatar-hover">
               <div className="logos flex items-center gap-1">
-                <img src="/images/Nav/Framehover.png" alt="Islam Avatar" />
+                 <ImgAtom
+                      src={"/images/Nav/Framehover.png" }
+                      alt={"Islam Avatar"}
+                      className={"logo-wo"}
+                      height={30}
+                      width={30}
+                  />
                 <span>+</span>
-                <img
-                  src="/images/svg/qusetion-card/Avatar.svg"
-                  alt="Islam Avatar"
-                />
+                <ImgAtom
+                      src={"/images/svg/qusetion-card/Avatar.svg" }
+                      alt={"Islam Avatar"}
+                      className={"logo-wo"}
+                      height={40}
+                      width={40}
+                  />
+               
               </div>
               <Link
                 href="https://wa.me/+201550227582"
@@ -49,10 +59,14 @@ function HeaderSection() {
             </div>
           ) : (
             <div className="avatar">
-              <img
-                src="/images/svg/qusetion-card/Avatar.svg"
-                alt="Islam Avatar"
-              />
+              <ImgAtom
+                      src={"/images/svg/qusetion-card/Avatar.svg" }
+                      alt={"Islam Avatar"}
+                      className={"logo-wo"}
+                      height={40}
+                      width={40}
+                  />
+            
               <a
                 href="https://wa.me/+201550227582"
                 target="_blank"

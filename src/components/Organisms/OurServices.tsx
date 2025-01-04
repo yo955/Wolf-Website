@@ -46,7 +46,8 @@ export function OurServices() {
   );
 }
 
-function HoverCard({ item} : any) {
+// @ts-expect-error
+function HoverCard({ item }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
