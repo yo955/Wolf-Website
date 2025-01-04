@@ -12,6 +12,7 @@
   height: 530px;
   top: 62px;
   gap: 0px;
+  opacity: 0px;
   /* ارتفاع العنصر */
   /* لتحديد مكان النص */
   display: flex;
@@ -49,6 +50,7 @@
   gap: 10px;
   border-radius: 12px 0px 0px 0px;
   border: 0.5px 0px 0px 0px;
+  opacity: 0px;
   background-color: #121212;
   display: flex;
   align-items: center;
