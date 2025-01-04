@@ -46,7 +46,7 @@ export function OurServices() {
   );
 }
 
-function HoverCard({ item }) {
+function HoverCard({ item} : any) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
