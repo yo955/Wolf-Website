@@ -1,15 +1,12 @@
 "use client";
-import { Navbar, ParagraphAtom, ImgAtom } from "@/components";
+import { Navbar, ParagraphAtom } from "@/components";
 import Link from "next/link";
 import { useState } from "react";
-import { FaRegCircle } from "react-icons/fa6";
 
 function HeaderSection() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isopen, setIsOpen] = useState<boolean>(true);
-  const toggleAvailable = () => {
-    setIsOpen(!isopen);
-  };
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isAvailable, setIsAvailable] = useState<boolean>(false);
+
   return (
     <div className="headerSection">
       <div>
@@ -68,15 +65,16 @@ function HeaderSection() {
           )}
         </div>
 
-        <ParagraphAtom className="available">
-          <p>
-            <FaRegCircle
-              className={`circle ${isopen ? "open" : ""}`}
-              onClick={toggleAvailable}
-            />
-          </p>
+       <br/>
+       <ParagraphAtom className="available">
+          <div
+            onMouseEnter={() => setIsAvailable(true)}
+            onMouseLeave={() => setIsAvailable(false)}
+          >
+            <div className={`${isAvailable  ? "circle" : "circle"}`}></div>
+          </div>
           <p>Available now!</p>
-        </ParagraphAtom>
+       </ParagraphAtom>
       </div>
     </div>
   );
