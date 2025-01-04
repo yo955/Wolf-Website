@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
         <ImgAtom
             src={"/images/Nav/logo.png"}
             alt={"Logo"}
-            className={"logo"}
+            className={"logo-wo"}
             height={70}
             width={70}
           />

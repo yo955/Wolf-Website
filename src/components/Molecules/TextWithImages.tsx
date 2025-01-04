@@ -1,6 +1,5 @@
-// src/components/Molecules/TextWithImages.tsx
 import React from 'react';
-import {Text,ImageAtom} from '@/components';
+import { Text, ImageAtom } from '@/components';
 import Container from '@mui/material/Container';
 
 export const TextWithImages: React.FC = () => {
@@ -16,23 +15,25 @@ export const TextWithImages: React.FC = () => {
         className="textListen"
       />
       <Container className="containerImg">
-        <ImageAtom
-          src="/images/Glasstel1.png"
-          alt="Glasstel1"
-          className="glasstel"
-          width={560}
-          height={427}
-        />
-        <ImageAtom
-          src="/images/Glasstel2.png"
-          alt="Glasstel2"
-          className="glasstel"
-          width={560}
-          height={427}
-        />
+        <div className="imageWrapper">
+          <ImageAtom
+            src="/images/glass1.png"
+            alt="Glasstel1"
+            className="scrollImage"
+            width={560}
+            height={427}
+          />
+        </div>
+        <div className="imageWrapper">
+          <ImageAtom
+            src="/images/glass2.png"
+            alt="Glasstel2"
+            className="scrollImage"
+            width={560}
+            height={427}
+          />
+        </div>
       </Container>
     </div>
   );
 };
-
-

@@ -1,5 +1,5 @@
 "use client";
-import { Navbar, ParagraphAtom } from "@/components";
+import { Navbar, ParagraphAtom, ImgAtom } from "@/components";
 import Link from "next/link";
 import { useState } from "react";
 import { FaRegCircle } from "react-icons/fa6";
